@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(extract-text Repositorio_Endometriosis_Videos.docx)",
+      "Bash(pandoc Repositorio_Endometriosis_Videos.docx -o output.md)",
+      "PowerShell($word = New-Object -ComObject Word.Application; $word.Visible = $false; $doc = $word.Documents.Open\\(\"C:\\\\Users\\\\gaelm\\\\OneDrive\\\\Documentos\\\\EndometriosisRepository\\\\Repositorio_Endometriosis_Videos.docx\"\\); $text = $doc.Content.Text; $doc.Close\\(\\); $word.Quit\\(\\); $text)"
+    ]
+  }
+}

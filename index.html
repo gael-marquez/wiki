@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Endopedia | Repositorio de Endometriosis</title>
+  <meta name="description" content="Wiki educativa y comunitaria sobre endometriosis." />
+  
+  <link rel="icon" type="image/svg+xml" href="img/Yellow_ribbon.svg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              lilac: '#9B6BC9',
+              lilacLight: '#E9DDF5',
+              yellow: '#F5C242',
+              yellowLight: '#FCEFC7',
+              rose: '#F8D7DC'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background: #FAFAFB;
+      background-image: radial-gradient(circle at 0% 0%, #FCEFC7 0%, transparent 30%),
+                        radial-gradient(circle at 100% 5%, #F8D7DC 0%, transparent 35%);
+      background-attachment: fixed;
+    }
+    .filter-scroll::-webkit-scrollbar { height: 0; }
+    .filter-scroll { scrollbar-width: none; }
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up { animation: fade-in-up 0.35s ease-out backwards; }
+  </style>
+</head>
+
+<body class="font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <nav class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="img/foto_perfil.png" alt="Endopedia Logo" class="h-10 w-10 rounded-full object-cover">
+          <span class="font-bold text-brand-lilac text-xl tracking-tight">Endopedia</span>
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-brand-lilac font-semibold border-b-2 border-brand-lilac pb-1">Repositorio</a>
+          <a href="que-es.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">¿Qué es la Endometriosis?</a>
+          <a href="proyecto.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Sobre el Proyecto</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="w-full bg-white border-b border-slate-100">
+    <img
+      src="img/header_img.png"
+      alt="Wiki de Endometriosis — Porque nadie debería vivir esta enfermedad sola"
+      class="w-full h-auto block"
+    />
+  </header>
+
+  <section class="bg-white border-b border-slate-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+        <lottie-player
+          src="img/lottie/heart.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+          class="flex-shrink-0 drop-shadow-sm"
+          style="width: 100px; height: 100px;"
+        ></lottie-player>
+        <div>
+          <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Bienvenida al Repositorio</h1>
+          <p class="mt-4 text-slate-600 leading-relaxed text-lg">
+            Este es un espacio cuidado para informarte, compartir y aprender. Encontrarás videos, explicaciones y experiencias organizadas por tema — explora a tu ritmo, sin prisa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl w-full mx-auto px-4 sm:px-6 mt-10">
+    <div class="bg-gradient-to-r from-[#f4ebf9] to-[#fceef0] rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-white shadow-sm">
+      <div>
+        <h2 class="text-xl font-bold text-brand-lilac flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Directorio de Fisioterapia
+        </h2>
+        <p class="mt-2 text-slate-700 leading-relaxed">
+          ¿Buscas un fisioterapeuta de suelo pélvico en México? La Sociedad Mexicana de Fisioterapia en Pelviperineología (SOMEFIPP) cuenta con especialistas certificados que pueden guiar tu recuperación.
+        </p>
+      </div>
+      <a href="https://www.somefipp.com/contacto" target="_blank" rel="noopener noreferrer" class="shrink-0 bg-white text-brand-lilac font-semibold px-6 py-3 rounded-xl shadow hover:shadow-md transition-all border border-purple-100 flex items-center gap-2">
+        Buscar Especialista
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-10">
+    <section class="mb-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+        <h2 class="text-2xl font-bold text-slate-800">Explora los recursos</h2>
+        <div class="relative w-full sm:max-w-md">
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Buscar por palabra clave (ej. Mapeo, Kegel)..."
+            class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-lilac focus:border-brand-lilac transition-shadow"
+          />
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+          </svg>
+        </div>
+      </div>
+      <div id="filterBar" class="filter-scroll flex gap-3 overflow-x-auto pb-4 -mx-1 px-1"></div>
+    </section>
+
+    <div class="flex items-center justify-between mb-6">
+      <p id="countLabel" class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full"></p>
+    </div>
+
+    <section id="resourceGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></section>
+
+    <div id="emptyState" class="hidden text-center py-20">
+      <lottie-player
+        src="img/lottie/flowers.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+        class="mx-auto mb-4"
+        style="width: 120px; height: 120px;"
+      ></lottie-player>
+      <h3 class="text-lg font-semibold text-slate-800">No encontramos resultados</h3>
+      <p class="text-slate-500 mt-1">Intenta usar otras palabras clave o elimina los filtros.</p>
+    </div>
+  </main>
+
+  <footer class="mt-12 border-t border-slate-200 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+      <div class="rounded-xl bg-amber-50 border border-amber-200 p-5 mb-8 flex items-start gap-4">
+        <div class="bg-amber-100 p-2 rounded-full flex-shrink-0 mt-0.5">
+          <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          <strong class="font-semibold text-amber-900 block mb-1">Aviso médico importante:</strong>
+          La información de Endopedia es meramente educativa e informativa. El contenido aquí recopilado no sustituye una consulta médica profesional ni constituye un diagnóstico o tratamiento.
+        </p>
+      </div>
+      
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-2 opacity-80">
+          <img src="img/foto_perfil.png" alt="Endopedia" class="w-6 h-6 rounded-full grayscale">
+          <span class="text-sm font-semibold text-slate-500">Endopedia</span>
+        </div>
+        <p class="text-sm text-slate-500 text-center md:text-right">
+          Hecho con cuidado para nuestra comunidad.<br>
+          Porque nadie debería vivir esta enfermedad sola.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
