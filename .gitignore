@@ -1,0 +1,14 @@
+# Archivos de trabajo (no se publican en el sitio)
+Endopedia_Reclasificada_Por_Etapas.xlsx
+*.xlsx
+~$*
+
+# Basura del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
