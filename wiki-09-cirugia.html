@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cirugía: escisión vs. ablación | Endopedia</title>
+  <meta name="description" content="Comparativa de técnicas quirúrgicas para la endometriosis según la evidencia Cochrane: escisión versus ablación y tasas de recurrencia." />
+  <link rel="icon" type="image/svg+xml" href="img/Yellow_ribbon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: { lilac:'#9B6BC9', lilacDark:'#7C4FA8', lilacLight:'#F3ECFA', yellow:'#F5C242', yellowLight:'#FCEFC7', rose:'#FBEAEF' } }, fontFamily: { sans: ['Inter','system-ui','-apple-system','sans-serif'] } } } };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { background:#FAFAFB; background-image: radial-gradient(circle at 0% 0%, #FCEFC7 0%, transparent 28%), radial-gradient(circle at 100% 4%, #FBEAEF 0%, transparent 32%); background-attachment: fixed; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+<nav class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex justify-between items-center h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <img src="img/foto_perfil.png" alt="Endopedia" class="h-10 w-10 rounded-full object-cover ring-2 ring-brand-lilacLight">
+        <span class="font-extrabold text-brand-lilac text-xl tracking-tight">Endopedia</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="index.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Inicio</a>
+        <a href="que-es.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">¿Qué es la endometriosis?</a>
+        <a href="wiki.html" class="text-brand-lilac font-semibold border-b-2 border-brand-lilac pb-1">Información</a>
+        <a href="proyecto.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Quiénes somos</a>
+        <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1877F2] text-white text-sm font-semibold hover:bg-[#0e63d4] transition shadow-sm"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Síguenos</a>
+          <a href="mailto:contacto@endopedia.com.mx" aria-label="Escríbenos por correo" title="contacto@endopedia.com.mx" class="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-brand-lilac text-brand-lilac hover:bg-brand-lilacLight transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
+      </div>
+      <button id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-slate-600 hover:bg-slate-100 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white">
+    <div class="px-4 py-2 flex flex-col">
+      <a href="index.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">Inicio</a>
+      <a href="que-es.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">¿Qué es la endometriosis?</a>
+      <a href="wiki.html" class="py-3 px-3 rounded-lg text-brand-lilac bg-brand-lilacLight font-semibold">Información</a>
+      <a href="proyecto.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">Quiénes somos</a>
+      <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer" class="mt-1.5 py-3 px-3 rounded-lg bg-[#1877F2] text-white font-semibold text-center flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Síguenos en Facebook</a>
+        <a href="mailto:contacto@endopedia.com.mx" class="mt-2 py-3 px-3 rounded-lg border border-brand-lilac text-brand-lilac font-semibold text-center flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> Escríbenos por correo</a>
+    </div>
+  </div>
+</nav>
+
+<main class="flex-1">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+
+    <nav aria-label="Migas de pan" class="text-sm text-slate-500 mb-6">
+      <a href="index.html" class="hover:text-brand-lilac">Inicio</a>
+      <span class="mx-1.5 text-slate-300">/</span>
+      <a href="wiki.html" class="hover:text-brand-lilac">Información</a>
+      <span class="mx-1.5 text-slate-300">/</span>
+      <span class="text-slate-700 font-medium">Cirugía: escisión vs. ablación</span>
+    </nav>
+
+    <details class="lg:hidden mb-6 rounded-xl bg-white border border-slate-200 overflow-hidden">
+      <summary class="cursor-pointer select-none px-4 py-3 font-semibold text-slate-700">📑 Índice de la wiki</summary>
+      <nav class="px-2 pb-3 flex flex-col text-sm">
+        <a href="wiki-01-definicion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">1. Definición, epidemiología e impacto</a>
+        <a href="wiki-02-etiopatogenia.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">2. Etiopatogenia y fisiopatología</a>
+        <a href="wiki-03-sintomas.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">3. Síntomas y fenotipos clínicos</a>
+        <a href="wiki-04-diagnostico-acog.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">4. La revolución diagnóstica (ACOG 2026)</a>
+        <a href="wiki-05-eshre.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">5. Directrices europeas (ESHRE 2022)</a>
+        <a href="wiki-06-clasificacion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">6. Clasificación y estadificación</a>
+        <a href="wiki-07-sensibilizacion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">7. Sensibilización central y dolor crónico</a>
+        <a href="wiki-08-farmacoterapia.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">8. Farmacoterapia avanzada</a>
+        <a href="wiki-09-cirugia.html" class="px-3 py-2 rounded-lg bg-brand-lilacLight text-brand-lilacDark font-semibold">9. Cirugía: escisión vs. ablación</a>
+        <a href="wiki-10-infertilidad-efi.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">10. Infertilidad y el índice EFI</a>
+        <a href="wiki-11-fisioterapia-nutricion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">11. Fisioterapia y nutrición antiinflamatoria</a>
+      </nav>
+    </details>
+
+    <div class="lg:grid lg:grid-cols-[260px_1fr] lg:gap-10">
+
+      <aside class="hidden lg:block">
+        <div class="sticky top-20">
+          <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-3 px-3">Contenido</p>
+          <nav class="flex flex-col text-sm">
+        <a href="wiki-01-definicion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">1. Definición, epidemiología e impacto</a>
+        <a href="wiki-02-etiopatogenia.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">2. Etiopatogenia y fisiopatología</a>
+        <a href="wiki-03-sintomas.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">3. Síntomas y fenotipos clínicos</a>
+        <a href="wiki-04-diagnostico-acog.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">4. La revolución diagnóstica (ACOG 2026)</a>
+        <a href="wiki-05-eshre.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">5. Directrices europeas (ESHRE 2022)</a>
+        <a href="wiki-06-clasificacion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">6. Clasificación y estadificación</a>
+        <a href="wiki-07-sensibilizacion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">7. Sensibilización central y dolor crónico</a>
+        <a href="wiki-08-farmacoterapia.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">8. Farmacoterapia avanzada</a>
+        <a href="wiki-09-cirugia.html" class="px-3 py-2 rounded-lg bg-brand-lilacLight text-brand-lilacDark font-semibold">9. Cirugía: escisión vs. ablación</a>
+        <a href="wiki-10-infertilidad-efi.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">10. Infertilidad y el índice EFI</a>
+        <a href="wiki-11-fisioterapia-nutricion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">11. Fisioterapia y nutrición antiinflamatoria</a>
+          </nav>
+        </div>
+      </aside>
+
+      <article class="min-w-0 bg-white rounded-2xl border border-slate-200 p-6 sm:p-9">
+        <span class="text-sm font-semibold text-brand-lilac">Artículo 9</span>
+        <h1 class="mt-1 text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Intervenciones quirúrgicas laparoscópicas: escisión versus ablación</h1>
+        <p class="mt-5 text-slate-600 leading-relaxed">Cuando el manejo médico empírico resulta ineficaz frente al dolor refractario, o ante la presencia de endometriomas masivos, masas anexiales complejas y alteraciones en la arquitectura pélvica, la intervención quirúrgica se torna ineludible. El procedimiento de elección estándar es la cirugía laparoscópica mínimamente invasiva. No obstante, el debate primario que divide a la comunidad quirúrgica ginecológica y define la trayectoria clínica de la paciente recae en la técnica específica empleada para neutralizar la enfermedad: <strong class="font-semibold text-slate-800">ablación</strong> versus <strong class="font-semibold text-slate-800">escisión</strong>.</p>
+        <h2 class="mt-9 text-xl font-bold text-slate-900">Técnicas operatorias definidas</h2>
+        <ul class="mt-4 space-y-3 text-slate-600 leading-relaxed list-disc pl-5 marker:text-brand-lilac">
+          <li><strong class="font-semibold text-slate-800">Ablación quirúrgica:</strong> Implica la utilización de modalidades de energía térmica, como el láser de CO2 o corrientes electroquirúrgicas de fulguración, para destruir (vaporizar) o drenar la porción superficial y visible de los implantes endometriales. Aunque es técnicamente menos demandante y más rápida de ejecutar, la ablación deja intacta la arquitectura de los tejidos subyacentes e impide la evaluación anatomopatológica de las células vaporizadas.</li>
+          <li><strong class="font-semibold text-slate-800">Escisión quirúrgica (exéresis):</strong> Un procedimiento anatómico radical que exige un dominio superior de la anatomía pélvica. Consiste en la disección meticulosa, el corte perimetral y la extirpación física completa y en bloque de la lesión endometriósica, incluyendo el tejido fibrótico y el estroma inflamado circundante, hasta alcanzar planos de tejido sano. Este abordaje garantiza el envío de la pieza operatoria a patología para un diagnóstico histológico definitivo.</li>
+        </ul>
+        <h2 class="mt-9 text-xl font-bold text-slate-900">Evidencia de la revisión Cochrane y tasas de recurrencia</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed">Una exhaustiva revisión sistemática albergada en la prestigiosa base de datos Cochrane —el estándar de oro en medicina basada en evidencia— proporcionó respuestas definitivas sobre la superioridad técnica al analizar los datos cualitativos y cuantitativos de más de 2,152 registros y 578 mujeres intervenidas quirúrgicamente.</p>
+        <p class="mt-4 text-slate-600 leading-relaxed">La evidencia científica dicta de forma aplastante que <strong class="font-semibold text-slate-800">la escisión quirúrgica proporciona resultados posoperatorios inmensamente más favorables que el drenaje y la ablación térmica</strong> en lo que respecta a la contención sistémica de la enfermedad.</p>
+        <div class="overflow-x-auto mt-6 rounded-xl border border-slate-200">
+          <table class="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr class="bg-brand-lilacLight text-brand-lilacDark">
+                <th class="px-4 py-3 font-semibold border-b border-slate-200">Parámetro evaluado post-cirugía (escisión vs. ablación)</th>
+                <th class="px-4 py-3 font-semibold border-b border-slate-200">Tendencia terapéutica</th>
+                <th class="px-4 py-3 font-semibold border-b border-slate-200">Evidencia estadística y hallazgos (Odds Ratio)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd:bg-white even:bg-slate-50/60 align-top">
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed"><strong>Recurrencia de la dismenorrea</strong></td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Favorece fuertemente a la escisión</td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">OR de 0.15 (beneficio analgésico drástico y sostenido). Tasa de recurrencia de hasta 34% en escisión versus 49% tras ablación.</td>
+              </tr>
+              <tr class="odd:bg-white even:bg-slate-50/60 align-top">
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed"><strong>Recurrencia de la dispareunia</strong></td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Favorece fuertemente a la escisión</td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">OR de 0.14. Tasa de recurrencia de hasta 23% en escisión versus 58% en ablación.</td>
+              </tr>
+              <tr class="odd:bg-white even:bg-slate-50/60 align-top">
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed"><strong>Recurrencia de dolor pélvico no menstrual</strong></td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Favorece fuertemente a la escisión</td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">OR de 0.10 (margen de confianza estadística altísimo).</td>
+              </tr>
+              <tr class="odd:bg-white even:bg-slate-50/60 align-top">
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed"><strong>Recurrencia de endometriomas ováricos</strong></td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Favorece fuertemente a la escisión</td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">OR de 0.41. Solo entre el 5% y 17% reportan regreso de quistes tras la escisión, comparado con un altísimo 37% tras ablación.</td>
+              </tr>
+              <tr class="odd:bg-white even:bg-slate-50/60 align-top">
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed"><strong>Necesidad de reoperación a 2 años</strong></td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Favorece fuertemente a la escisión</td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">OR de 0.21. Reducción significativa de operaciones subsecuentes debido al éxito inicial en la remoción total de las raíces patológicas.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-slate-600 leading-relaxed">A pesar de los abrumadores y casi irrefutables beneficios analgésicos que la técnica de escisión profunda aporta sobre el control sintomático de la enfermedad, la revisión de la literatura alerta sobre implicaciones reproductivas a considerar. La investigación no encontró diferencias estadísticamente significativas en las tasas de embarazo espontáneo en el primer año entre la ablación y la escisión. Más aún, la técnica de escisión presenta un dilema inherente en el manejo del tejido ovárico: la cistectomía profunda y agresiva empleada para remover endometriomas masivos conlleva un daño iatrogénico colateral. La tracción tisular destruye el parénquima ovárico subyacente y sano, induciendo una disminución medible en el volumen ovárico y una caída significativa en el recuento de folículos antrales, parámetros indispensables que delimitan la reserva ovárica.</p>
+        <p class="mt-4 text-slate-600 leading-relaxed">Por estas complejas determinaciones de costo-beneficio, el ACOG dictamina que la simple laparoscopia diagnóstica exploratoria debe ser éticamente obsoleta. Ninguna paciente debe ser sometida a los múltiples riesgos inherentes a una intervención quirúrgica mayor (hemorragia, lesión visceral e infección) sin obtener la correspondencia de un beneficio terapéutico tangible. En consecuencia, el único estándar quirúrgico moderno inobjetable es el abordaje escisional simultáneo instrumentado exclusivamente por ginecólogos altamente especializados y familiarizados con la anatomía retroperitoneal profunda.</p>
+
+        <nav class="mt-10 pt-6 border-t border-slate-100 flex items-center justify-between gap-4">
+          <a href="wiki-08-farmacoterapia.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 text-slate-600 text-sm font-semibold hover:border-brand-lilac hover:text-brand-lilac transition">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            <span class="text-left"><span class="block text-xs font-normal opacity-70">Anterior</span>Farmacoterapia avanzada</span>
+          </a>
+          <a href="wiki-10-infertilidad-efi.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-brand-lilac text-white text-sm font-semibold hover:bg-brand-lilacDark transition text-right">
+            <span><span class="block text-xs font-normal opacity-80">Siguiente</span>Infertilidad y el índice EFI</span>
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </nav>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer class="mt-12 border-t border-slate-200 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+    <div class="rounded-2xl bg-amber-50 border border-amber-200 p-5 mb-8 flex items-start gap-4">
+      <div class="bg-amber-100 p-2 rounded-full flex-shrink-0 mt-0.5">
+        <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <p class="text-sm text-slate-700 leading-relaxed">
+        <strong class="font-semibold text-amber-900 block mb-1">Aviso médico importante:</strong>
+        La información de Endopedia es meramente educativa e informativa. No sustituye una consulta médica profesional ni constituye un diagnóstico o tratamiento. Consulta siempre a tu médico especialista.
+      </p>
+    </div>
+    <div class="border-t border-slate-100 pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+      <div class="flex items-center gap-2.5">
+        <img src="img/foto_perfil.png" alt="Endopedia" class="w-9 h-9 rounded-full">
+        <span class="text-sm font-semibold text-slate-600">Endopedia</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+        <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-lilac transition">
+          <img src="img/Facebook_Logo_Primary.png" alt="" class="w-6 h-6"/> Facebook
+        </a>
+        <a href="mailto:contacto@endopedia.com.mx" class="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-lilac transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          contacto@endopedia.com.mx
+        </a>
+      </div>
+    </div>
+    <p class="mt-6 text-xs text-slate-400 text-center">© <span data-year></span> Endopedia · Hecho con cuidado para nuestra comunidad 💛 · Porque nadie debería vivir esta enfermedad sola.</p>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fisioterapia y nutrición antiinflamatoria | Endopedia</title>
+  <meta name="description" content="El abordaje biopsicosocial de la endometriosis: fisioterapia del suelo pélvico y dieta antiinflamatoria (Omega-3, mediterránea, FODMAP) como apoyo terapéutico." />
+  <link rel="icon" type="image/svg+xml" href="img/Yellow_ribbon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: { lilac:'#9B6BC9', lilacDark:'#7C4FA8', lilacLight:'#F3ECFA', yellow:'#F5C242', yellowLight:'#FCEFC7', rose:'#FBEAEF' } }, fontFamily: { sans: ['Inter','system-ui','-apple-system','sans-serif'] } } } };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { background:#FAFAFB; background-image: radial-gradient(circle at 0% 0%, #FCEFC7 0%, transparent 28%), radial-gradient(circle at 100% 4%, #FBEAEF 0%, transparent 32%); background-attachment: fixed; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+<nav class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex justify-between items-center h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <img src="img/foto_perfil.png" alt="Endopedia" class="h-10 w-10 rounded-full object-cover ring-2 ring-brand-lilacLight">
+        <span class="font-extrabold text-brand-lilac text-xl tracking-tight">Endopedia</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="index.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Inicio</a>
+        <a href="que-es.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">¿Qué es la endometriosis?</a>
+        <a href="wiki.html" class="text-brand-lilac font-semibold border-b-2 border-brand-lilac pb-1">Información</a>
+        <a href="proyecto.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Quiénes somos</a>
+        <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1877F2] text-white text-sm font-semibold hover:bg-[#0e63d4] transition shadow-sm"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Síguenos</a>
+          <a href="mailto:contacto@endopedia.com.mx" aria-label="Escríbenos por correo" title="contacto@endopedia.com.mx" class="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-brand-lilac text-brand-lilac hover:bg-brand-lilacLight transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
+      </div>
+      <button id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-slate-600 hover:bg-slate-100 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white">
+    <div class="px-4 py-2 flex flex-col">
+      <a href="index.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">Inicio</a>
+      <a href="que-es.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">¿Qué es la endometriosis?</a>
+      <a href="wiki.html" class="py-3 px-3 rounded-lg text-brand-lilac bg-brand-lilacLight font-semibold">Información</a>
+      <a href="proyecto.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">Quiénes somos</a>
+      <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer" class="mt-1.5 py-3 px-3 rounded-lg bg-[#1877F2] text-white font-semibold text-center flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Síguenos en Facebook</a>
+        <a href="mailto:contacto@endopedia.com.mx" class="mt-2 py-3 px-3 rounded-lg border border-brand-lilac text-brand-lilac font-semibold text-center flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> Escríbenos por correo</a>
+    </div>
+  </div>
+</nav>
+
+<main class="flex-1">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+
+    <nav aria-label="Migas de pan" class="text-sm text-slate-500 mb-6">
+      <a href="index.html" class="hover:text-brand-lilac">Inicio</a>
+      <span class="mx-1.5 text-slate-300">/</span>
+      <a href="wiki.html" class="hover:text-brand-lilac">Información</a>
+      <span class="mx-1.5 text-slate-300">/</span>
+      <span class="text-slate-700 font-medium">Fisioterapia y nutrición antiinflamatoria</span>
+    </nav>
+
+    <details class="lg:hidden mb-6 rounded-xl bg-white border border-slate-200 overflow-hidden">
+      <summary class="cursor-pointer select-none px-4 py-3 font-semibold text-slate-700">📑 Índice de la wiki</summary>
+      <nav class="px-2 pb-3 flex flex-col text-sm">
+        <a href="wiki-01-definicion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">1. Definición, epidemiología e impacto</a>
+        <a href="wiki-02-etiopatogenia.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">2. Etiopatogenia y fisiopatología</a>
+        <a href="wiki-03-sintomas.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">3. Síntomas y fenotipos clínicos</a>
+        <a href="wiki-04-diagnostico-acog.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">4. La revolución diagnóstica (ACOG 2026)</a>
+        <a href="wiki-05-eshre.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">5. Directrices europeas (ESHRE 2022)</a>
+        <a href="wiki-06-clasificacion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">6. Clasificación y estadificación</a>
+        <a href="wiki-07-sensibilizacion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">7. Sensibilización central y dolor crónico</a>
+        <a href="wiki-08-farmacoterapia.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">8. Farmacoterapia avanzada</a>
+        <a href="wiki-09-cirugia.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">9. Cirugía: escisión vs. ablación</a>
+        <a href="wiki-10-infertilidad-efi.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">10. Infertilidad y el índice EFI</a>
+        <a href="wiki-11-fisioterapia-nutricion.html" class="px-3 py-2 rounded-lg bg-brand-lilacLight text-brand-lilacDark font-semibold">11. Fisioterapia y nutrición antiinflamatoria</a>
+      </nav>
+    </details>
+
+    <div class="lg:grid lg:grid-cols-[260px_1fr] lg:gap-10">
+
+      <aside class="hidden lg:block">
+        <div class="sticky top-20">
+          <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-3 px-3">Contenido</p>
+          <nav class="flex flex-col text-sm">
+        <a href="wiki-01-definicion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">1. Definición, epidemiología e impacto</a>
+        <a href="wiki-02-etiopatogenia.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">2. Etiopatogenia y fisiopatología</a>
+        <a href="wiki-03-sintomas.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">3. Síntomas y fenotipos clínicos</a>
+        <a href="wiki-04-diagnostico-acog.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">4. La revolución diagnóstica (ACOG 2026)</a>
+        <a href="wiki-05-eshre.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">5. Directrices europeas (ESHRE 2022)</a>
+        <a href="wiki-06-clasificacion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">6. Clasificación y estadificación</a>
+        <a href="wiki-07-sensibilizacion.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">7. Sensibilización central y dolor crónico</a>
+        <a href="wiki-08-farmacoterapia.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">8. Farmacoterapia avanzada</a>
+        <a href="wiki-09-cirugia.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">9. Cirugía: escisión vs. ablación</a>
+        <a href="wiki-10-infertilidad-efi.html" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-lilac transition">10. Infertilidad y el índice EFI</a>
+        <a href="wiki-11-fisioterapia-nutricion.html" class="px-3 py-2 rounded-lg bg-brand-lilacLight text-brand-lilacDark font-semibold">11. Fisioterapia y nutrición antiinflamatoria</a>
+          </nav>
+        </div>
+      </aside>
+
+      <article class="min-w-0 bg-white rounded-2xl border border-slate-200 p-6 sm:p-9">
+        <span class="text-sm font-semibold text-brand-lilac">Artículo 11</span>
+        <h1 class="mt-1 text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">El andamiaje biopsicosocial: fisioterapia pélvica y nutrición antiinflamatoria</h1>
+        <p class="mt-5 text-slate-600 leading-relaxed">Los cimientos inestables de las tasas alarmantes de recidivas posquirúrgicas de dolor y los perfiles imprevisibles de tolerancia hacia fármacos neuro-supresores impulsan el actual mandato imperativo de incorporar y entrelazar métodos complementarios bajo un estricto modelo biopsicosocial integral. Esta perspectiva expansiva no persigue infructuosamente revertir la etiología patogénica primaria de la matriz celular endometrial ectópica; su objetivo sublime radica en apoderar al sujeto que la padece, propulsando la rehabilitación de su rutina funcional sistémica y aplastando paralelamente la reactividad incesante que encienden las vías metabólicas inflamatorias secundarias, optimizando radicalmente con ello su calidad de vida en parámetros antes inalcanzables.</p>
+        <h2 class="mt-9 text-xl font-bold text-slate-900">El rol definitivo de la fisioterapia y la rehabilitación del suelo pélvico (PFT)</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed">La densa y compleja musculatura esquelética entramada de forma intrincada en la pelvis reacciona fisiológicamente frente al bombardeo visceral crónico del dolor neuropático instaurando contracciones espásticas, tensión sostenida y una marcada hipertonicidad estructural en forma de autoprotección. Esta espasticidad perpetúa espirales somáticas que originan o agravan inmensamente complicaciones mecánicas coexistentes que afligen de manera habitual a estas pacientes, incluyendo la incapacidad penetrativa del coito (dispareunia de evitación miofascial), bloqueos y disfunciones graves en los mecanismos intestinales rectales y disrupciones en la micción uretral.</p>
+        <p class="mt-4 text-slate-600 leading-relaxed">Metaanálisis cuantitativos pormenorizados en el escrutinio de cohortes clínicas demuestran que las tácticas de rehabilitación aplicadas metódicamente por especialistas fisioterapeutas producen descensos estadísticamente impactantes en la medición bruta del dolor (MD de −1.97, una reducción sólida del dolor al emplear la terapia local comparada con grupos placebo o pacientes desatendidos).</p>
+        <p class="mt-4 text-slate-600 leading-relaxed">Las modalidades abarcadas por la PFT no se limitan al trabajo empírico en vacío; requieren pedagogías somáticas extensas, estiramiento biomecánico dirigido, ejercicios de movilización profunda de fascias que alivian nudos hiperfocales adherentes o “puntos gatillo” a través de manipulaciones manuales táctiles (internas y externas) sumadas a innovadoras estrategias que integran modalidades como la terapia electrofísica, los emisores láser y el cupping. Se trata de restablecer imperiosamente el flujo arterial y venoso estrangulado para inundar el tejido de oxígeno sanador y recuperar las capacidades innatas del tejido conectivo peri pélvico.</p>
+        <p class="mt-4 text-slate-600 leading-relaxed">Crucial a todo este abordaje fisioterapéutico, e intrínsecamente indispensable según la pedagogía moderna, es el entrenamiento de los fisioterapeutas del suelo pélvico en pautas de cuidado "informado sobre trauma"; estas metodologías se aseguran de no desencadenar reacciones emocionales desadaptativas postraumáticas y generar un clima psicológicamente impoluto, ético y resguardado para la terapia y el trabajo corporal curativo de la paciente.</p>
+        <h2 class="mt-9 text-xl font-bold text-slate-900">Paradigmas nutricionales y el efecto protector de la dieta antiinflamatoria</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed">Habiéndose determinado inequívocamente que los tejidos ectópicos de la endometriosis son entidades hiperactivas cuyo sustento patológico primario radica en inflamación local exacerbada mediante el estrógeno, emerge un ingente corpus de artículos y literatura científica que corrobora la efectividad indiscutida de moduladores dietéticos diseñados a medida sobre la mitigación progresiva del nivel de sensibilidad sintomatológica neuropática.</p>
+        <p class="mt-4 text-slate-600 leading-relaxed">A través de ensayos rigurosos sobre las dietas, los investigadores recomiendan patrones nutricionales y la supresión específica de grupos alimenticios como adjuntos directos al plan de salud.</p>
+        <ul class="mt-4 space-y-3 text-slate-600 leading-relaxed list-disc pl-5 marker:text-brand-lilac">
+          <li><strong class="font-semibold text-slate-800">Potenciadores moleculares y agentes naturales:</strong> Es vital la ingesta suplementada y dietética focal de precursores con ácidos grasos poliinsaturados Omega-3 (PUFAs) concentrados y suplementos biolipídicos como el escualeno marino, cuyo beneficio intrínseco molecular es atajar frontalmente el torrente destructivo inducido por la proliferación del ácido araquidónico bloqueando las mortales descargas crónicas de citoquinas nocivas IL-6 y el factor de necrosis tumoral (TNFα). Los estudios sobre la dieta de espectro Mediterráneo también realzan el empleo constante y masivo de compuestos ricos y densos en antioxidantes antiestrógenos potentes como la quercetina y las epigalocatequinas presentes orgánicamente, o de compuestos naturales del aceite de oliva extra virgen (Oleocantal) los cuales, en un análisis farmacológico profundo, exhiben mecanismos de bloqueo de ciclooxigenasa de una eficacia inhibitoria análoga e incluso idéntica en magnitud al ibuprofeno farmacéutico manufacturado.</li>
+          <li><strong class="font-semibold text-slate-800">Comorbilidades gastrológicas y exclusión estratégica nutricional (FODMAP):</strong> Diversos estudios reportan una concomitancia notablemente alta de disrupciones en pacientes aquejados tanto por endometriosis activa como por diagnósticos coetáneos de Síndrome de Intestino Irritable y patologías inflamatorias en el tubo gastrointestinal inferior o procesos autoinmunes como la enfermedad celíaca subyacente. Frente a estos espectros combinados, la exclusión imperativa de alérgenos inflamatorios mediante adopción temporal de dietas de bajo nivel de oligosacáridos, disacáridos y polioles fermentables (bajas en compuestos FODMAPs) junto con planes libres de prolaminas del trigo (gluten) demuestran supresión efectiva de espasmos abdominales.</li>
+        </ul>
+        <p class="mt-4 text-slate-600 leading-relaxed">Además de integrar estas modificaciones beneficiosas, ciertos compuestos exacerban los síntomas. A continuación, se presenta el análisis de meta-riesgos sobre nutrientes inflamatorios evaluados clínicamente en la proliferación sintomatológica:</p>
+        <div class="overflow-x-auto mt-6 rounded-xl border border-slate-200">
+          <table class="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr class="bg-brand-lilacLight text-brand-lilacDark">
+                <th class="px-4 py-3 font-semibold border-b border-slate-200">Agentes y factores evaluados en patrones de la dieta</th>
+                <th class="px-4 py-3 font-semibold border-b border-slate-200">Incidencia de riesgo en modulación / exacerbación</th>
+                <th class="px-4 py-3 font-semibold border-b border-slate-200">Evidencia clínica y efecto correlacionado en metaanálisis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd:bg-white even:bg-slate-50/60 align-top">
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed"><strong>Ácidos grasos y grasas trans</strong></td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Aumento severo de riesgo inflamatorio</td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Posee asociación adversa directa. Riesgo Relativo (RR) de 1.12. Su ingesta fomenta la cascada metabólica de dolor e inflamación.</td>
+              </tr>
+              <tr class="odd:bg-white even:bg-slate-50/60 align-top">
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed"><strong>Grasas saturadas altas y lácteos enteros</strong></td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Aumento moderado</td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Fomenta inflamación sistémica. Riesgo Relativo (RR) de 1.06 (evidencia ligada a dietas ricas en carne y altas proporciones de lactosa).</td>
+              </tr>
+              <tr class="odd:bg-white even:bg-slate-50/60 align-top">
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed"><strong>Ingesta excesiva de carnes rojas</strong></td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Aumento patológico significativo</td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Correlación directa a dolor agravado en metaanálisis. Riesgo Relativo (RR) 1.17.</td>
+              </tr>
+              <tr class="odd:bg-white even:bg-slate-50/60 align-top">
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed"><strong>Carga de cafeína y derivados</strong></td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Neutral o dudoso</td>
+                <td class="px-4 py-3 border-b border-slate-100 text-slate-600 leading-relaxed">Carece de prueba definitiva (falta de asociación). Heterogeneidad amplia reportando RR de 1.26 al café, no probatoria de daño agudo y sujeta al sesgo publicacional o biológico de cada paciente particular.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-slate-600 leading-relaxed">El establecimiento meticuloso de un diseño profiláctico en el abordaje dietético, estructurado de la mano de un experto profesional y exento de dietas empíricas infundadas, junto con los estiramientos neurofisiológicos de la musculatura pélvica, consolida en su suma un arsenal defensivo que resguarda la estructura de las intervenciones médicas farmacológicas.</p>
+        <p class="mt-4 text-slate-600 leading-relaxed">El corpus de investigación detallado a través de estas secciones delinea indiscutiblemente la transformación que ha experimentado la comprensión médica de la endometriosis; alejándose definitivamente de un paradigma histórico que fragmentaba el dolor para centrarse y culminar en un modelo de cuidados global, holístico y basado sólidamente en consensos quirúrgicos, farmacéuticos y terapias corporales complementarias que empoderan la vida y defienden el confort intrínseco del individuo.</p>
+
+        <nav class="mt-10 pt-6 border-t border-slate-100 flex items-center justify-between gap-4">
+          <a href="wiki-10-infertilidad-efi.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 text-slate-600 text-sm font-semibold hover:border-brand-lilac hover:text-brand-lilac transition">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            <span class="text-left"><span class="block text-xs font-normal opacity-70">Anterior</span>Infertilidad y el índice EFI</span>
+          </a>
+          <span></span>
+        </nav>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer class="mt-12 border-t border-slate-200 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+    <div class="rounded-2xl bg-amber-50 border border-amber-200 p-5 mb-8 flex items-start gap-4">
+      <div class="bg-amber-100 p-2 rounded-full flex-shrink-0 mt-0.5">
+        <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <p class="text-sm text-slate-700 leading-relaxed">
+        <strong class="font-semibold text-amber-900 block mb-1">Aviso médico importante:</strong>
+        La información de Endopedia es meramente educativa e informativa. No sustituye una consulta médica profesional ni constituye un diagnóstico o tratamiento. Consulta siempre a tu médico especialista.
+      </p>
+    </div>
+    <div class="border-t border-slate-100 pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+      <div class="flex items-center gap-2.5">
+        <img src="img/foto_perfil.png" alt="Endopedia" class="w-9 h-9 rounded-full">
+        <span class="text-sm font-semibold text-slate-600">Endopedia</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+        <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-lilac transition">
+          <img src="img/Facebook_Logo_Primary.png" alt="" class="w-6 h-6"/> Facebook
+        </a>
+        <a href="mailto:contacto@endopedia.com.mx" class="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-lilac transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          contacto@endopedia.com.mx
+        </a>
+      </div>
+    </div>
+    <p class="mt-6 text-xs text-slate-400 text-center">© <span data-year></span> Endopedia · Hecho con cuidado para nuestra comunidad 💛 · Porque nadie debería vivir esta enfermedad sola.</p>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

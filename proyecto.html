@@ -3,53 +3,175 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre el Proyecto | Endopedia</title>
+  <title>Quiénes somos | Endopedia</title>
+  <meta name="description" content="Conoce la historia detrás de Endopedia y a Angélica Rodríguez, su fundadora. Súmate al directorio médico colaborativo." />
   <link rel="icon" type="image/svg+xml" href="img/Yellow_ribbon.svg" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: { extend: { colors: { brand: { lilac: '#9B6BC9', yellow: '#F5C242' } } } }
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              lilac: '#9B6BC9',
+              lilacDark: '#7C4FA8',
+              lilacLight: '#F3ECFA',
+              yellow: '#F5C242',
+              yellowLight: '#FCEFC7',
+              rose: '#FBEAEF'
+            }
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+        }
+      }
     };
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: #FAFAFB;
+      background-image: radial-gradient(circle at 0% 0%, #FCEFC7 0%, transparent 28%),
+                        radial-gradient(circle at 100% 4%, #FBEAEF 0%, transparent 32%);
+      background-attachment: fixed;
+    }
+  </style>
 </head>
-<body class="font-sans text-slate-800 antialiased min-h-screen flex flex-col bg-[#FAFAFB]">
+
+<body class="font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- ===== NAV ===== -->
   <nav class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="flex items-center gap-2">
-          <img src="img/foto_perfil.png" alt="Endopedia Logo" class="h-10 w-10 rounded-full object-cover">
-          <span class="font-bold text-brand-lilac text-xl tracking-tight">Endopedia</span>
+        <a href="index.html" class="flex items-center gap-2.5">
+          <img src="img/foto_perfil.png" alt="Endopedia" class="h-10 w-10 rounded-full object-cover ring-2 ring-brand-lilacLight">
+          <span class="font-extrabold text-brand-lilac text-xl tracking-tight">Endopedia</span>
         </a>
-        <div class="hidden md:flex space-x-8">
-          <a href="index.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Repositorio</a>
-          <a href="que-es.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">¿Qué es la Endometriosis?</a>
-          <a href="proyecto.html" class="text-brand-lilac font-semibold border-b-2 border-brand-lilac pb-1">Sobre el Proyecto</a>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="index.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Inicio</a>
+          <a href="que-es.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">¿Qué es la endometriosis?</a>
+          <a href="wiki.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Información</a>
+          <a href="proyecto.html" class="text-brand-lilac font-semibold border-b-2 border-brand-lilac pb-1">Quiénes somos</a>
+          <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1877F2] text-white text-sm font-semibold hover:bg-[#0e63d4] transition shadow-sm"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Síguenos</a>
+          <a href="mailto:contacto@endopedia.com.mx" aria-label="Escríbenos por correo" title="contacto@endopedia.com.mx" class="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-brand-lilac text-brand-lilac hover:bg-brand-lilacLight transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
         </div>
+        <button id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-slate-600 hover:bg-slate-100 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white">
+      <div class="px-4 py-2 flex flex-col">
+        <a href="index.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">Inicio</a>
+        <a href="que-es.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">¿Qué es la endometriosis?</a>
+        <a href="wiki.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">Información</a>
+        <a href="proyecto.html" class="py-3 px-3 rounded-lg text-brand-lilac bg-brand-lilacLight font-semibold">Quiénes somos</a>
+        <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer" class="mt-1.5 py-3 px-3 rounded-lg bg-[#1877F2] text-white font-semibold text-center flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Síguenos en Facebook</a>
+        <a href="mailto:contacto@endopedia.com.mx" class="mt-2 py-3 px-3 rounded-lg border border-brand-lilac text-brand-lilac font-semibold text-center flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> Escríbenos por correo</a>
       </div>
     </div>
   </nav>
 
-  <main class="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-12">
-    <h1 class="text-3xl sm:text-4xl font-bold text-brand-lilac mb-6">Sobre el Proyecto</h1>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
-            <h2 class="text-2xl font-bold text-slate-800 mb-4">Nuestro Propósito</h2>
-            <p class="text-slate-600 leading-relaxed mb-4">
-                Este repositorio nace de la necesidad de centralizar recursos educativos, explicaciones médicas y experiencias reales sobre la endometriosis.
-            </p>
-            <p class="text-slate-600 leading-relaxed">
-                Navegar por el diagnóstico y los tratamientos puede ser abrumador. Al organizar videos y testimonios en categorías claras (cirugía, nutrición, suelo pélvico), buscamos que ninguna paciente se sienta sola o desinformada.
-            </p>
+  <!-- ===== CONTENIDO ===== -->
+  <main class="flex-1 max-w-3xl w-full mx-auto px-4 sm:px-6 py-10 sm:py-14">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-brand-lilac mb-8 text-center">Quiénes somos</h1>
+
+    <!-- Carta de la fundadora -->
+    <article class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-9">
+      <div class="flex flex-col sm:flex-row items-center gap-6 mb-8">
+        <img src="img/Angelica_foto.jpeg" alt="Angélica Rodríguez, fundadora de Endopedia"
+             class="w-40 sm:w-44 aspect-[4/5] rounded-2xl object-cover object-top ring-4 ring-brand-lilacLight shadow-sm flex-shrink-0" />
+        <div class="text-center sm:text-left">
+          <p class="text-xs font-semibold uppercase tracking-widest text-brand-lilac">Fundadora de Endopedia</p>
+          <h2 class="mt-1 text-2xl sm:text-3xl font-bold text-slate-900">Hola, soy Angélica Rodríguez 💛</h2>
         </div>
-        
-        <div class="bg-[#FCEFC7] rounded-2xl border border-yellow-200 p-8 flex flex-col justify-center items-center">
-            <h3 class="text-xl font-bold text-amber-900 text-center mb-3">Comunidad y Apoyo</h3>
-            <p class="text-amber-800 text-center text-sm leading-relaxed">
-                El conocimiento empodera. Aprender a leer tus síntomas, conocer las opciones de mapeo y entender los tratamientos mejora drásticamente la calidad de vida y permite hacer mejores preguntas en consulta.
-            </p>
-        </div>
-    </div>
+      </div>
+
+      <div class="space-y-5 text-slate-700 leading-relaxed sm:text-lg">
+        <p>A lo largo de mi propio proceso con endometriosis, me di cuenta de lo difícil que puede ser encontrar información clara, comprender los distintos aspectos de la enfermedad y sentirse acompañada durante el camino.</p>
+
+        <p>Por esa razón nació <strong class="text-brand-lilacDark">Endopedia</strong>: un espacio creado con el propósito de reunir información, recursos, experiencias y contenido que puedan ser de utilidad para quienes buscan aprender más sobre la endometriosis. Mi intención es contribuir a la difusión de información accesible, fomentar la conversación sobre esta enfermedad y ayudar a que más mujeres encuentren herramientas que les permitan comprender mejor su situación y tomar decisiones informadas junto con sus profesionales de la salud.</p>
+      </div>
+
+      <!-- Directorio médico colaborativo -->
+      <div class="mt-7 rounded-2xl bg-brand-lilacLight border border-purple-100 p-5 sm:p-6">
+        <h3 class="font-bold text-brand-lilacDark flex items-center gap-2 text-lg">
+          <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+          Directorio médico colaborativo
+        </h3>
+        <p class="mt-3 text-slate-700 leading-relaxed">
+          Actualmente estoy construyendo una sección de directorio médico con el objetivo de reunir referencias de especialistas que hayan ayudado a mujeres con endometriosis. <strong>Si tuviste una cirugía o tratamiento exitoso</strong> y deseas compartir los datos de tu médico junto con una breve reseña de tu experiencia, me encantaría que te pusieras en contacto conmigo. La idea es crear un recurso colaborativo que pueda ayudar a otras mujeres en la búsqueda de atención médica.
+        </p>
+      </div>
+
+      <p class="mt-7 text-slate-700 leading-relaxed sm:text-lg">
+        Creo firmemente que compartir información y experiencias puede marcar una diferencia positiva, y que sentirse acompañada durante el proceso es importante.
+      </p>
+    </article>
+
+    <!-- Tarjeta de contacto -->
+    <section class="mt-8 bg-gradient-to-br from-brand-yellowLight to-white rounded-2xl border border-yellow-200 p-6 sm:p-8">
+      <h3 class="text-xl font-bold text-amber-900 text-center">¿Quieres ponerte en contacto?</h3>
+      <p class="mt-2 text-amber-800 text-center leading-relaxed">
+        Si deseas compartir tu experiencia o aportar información para este proyecto, escríbeme:
+      </p>
+
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <a href="mailto:contacto@endopedia.com.mx"
+           class="flex items-center justify-center gap-2 bg-white rounded-xl border border-amber-200 px-4 py-3 font-semibold text-slate-700 hover:shadow-md transition">
+          <span aria-hidden="true">📩</span> Correo
+        </a>
+        <a href="tel:+525519652932"
+           class="flex items-center justify-center gap-2 bg-white rounded-xl border border-amber-200 px-4 py-3 font-semibold text-slate-700 hover:shadow-md transition">
+          <span aria-hidden="true">📱</span> 55 1965 2932
+        </a>
+        <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer"
+           class="flex items-center justify-center gap-2 bg-white rounded-xl border border-amber-200 px-4 py-3 font-semibold text-slate-700 hover:shadow-md transition">
+          <img src="img/Facebook_Logo_Primary.png" alt="" class="w-6 h-6" /> Facebook
+        </a>
+      </div>
+      <p class="mt-4 text-center text-sm text-amber-800/80 break-all">contacto@endopedia.com.mx</p>
+    </section>
+
+    <p class="mt-10 text-center text-lg font-medium text-slate-600">Gracias por ser parte de esta comunidad 💛</p>
   </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="mt-12 border-t border-slate-200 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+      <div class="rounded-2xl bg-amber-50 border border-amber-200 p-5 mb-8 flex items-start gap-4">
+        <div class="bg-amber-100 p-2 rounded-full flex-shrink-0 mt-0.5">
+          <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          <strong class="font-semibold text-amber-900 block mb-1">Aviso médico importante:</strong>
+          La información de Endopedia es meramente educativa e informativa. No sustituye una consulta médica profesional ni constituye un diagnóstico o tratamiento. Consulta siempre a tu médico especialista.
+        </p>
+      </div>
+      <div class="border-t border-slate-100 pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <div class="flex items-center gap-2.5">
+          <img src="img/foto_perfil.png" alt="Endopedia" class="w-9 h-9 rounded-full">
+          <span class="text-sm font-semibold text-slate-600">Endopedia</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-lilac transition">
+            <img src="img/Facebook_Logo_Primary.png" alt="" class="w-6 h-6" /> Facebook
+          </a>
+          <a href="mailto:contacto@endopedia.com.mx"
+             class="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-lilac transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            contacto@endopedia.com.mx
+          </a>
+        </div>
+      </div>
+      <p class="mt-6 text-xs text-slate-400 text-center">
+        © <span data-year></span> Endopedia · Hecho con cuidado para nuestra comunidad 💛 · Porque nadie debería vivir esta enfermedad sola.
+      </p>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
 </body>
 </html>

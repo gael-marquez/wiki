@@ -4,50 +4,234 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>¿Qué es la Endometriosis? | Endopedia</title>
+  <meta name="description" content="Qué es la endometriosis, sus síntomas y la importancia de un diagnóstico integral con mapeo especializado." />
   <link rel="icon" type="image/svg+xml" href="img/Yellow_ribbon.svg" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: { extend: { colors: { brand: { lilac: '#9B6BC9', yellow: '#F5C242' } } } }
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              lilac: '#9B6BC9',
+              lilacDark: '#7C4FA8',
+              lilacLight: '#F3ECFA',
+              yellow: '#F5C242',
+              yellowLight: '#FCEFC7',
+              rose: '#FBEAEF'
+            }
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+        }
+      }
     };
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: #FAFAFB;
+      background-image: radial-gradient(circle at 0% 0%, #FCEFC7 0%, transparent 28%),
+                        radial-gradient(circle at 100% 4%, #FBEAEF 0%, transparent 32%);
+      background-attachment: fixed;
+    }
+  </style>
 </head>
-<body class="font-sans text-slate-800 antialiased min-h-screen flex flex-col bg-[#FAFAFB]">
+
+<body class="font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- ===== NAV ===== -->
   <nav class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="flex items-center gap-2">
-          <img src="img/foto_perfil.png" alt="Endopedia Logo" class="h-10 w-10 rounded-full object-cover">
-          <span class="font-bold text-brand-lilac text-xl tracking-tight">Endopedia</span>
+        <a href="index.html" class="flex items-center gap-2.5">
+          <img src="img/foto_perfil.png" alt="Endopedia" class="h-10 w-10 rounded-full object-cover ring-2 ring-brand-lilacLight">
+          <span class="font-extrabold text-brand-lilac text-xl tracking-tight">Endopedia</span>
         </a>
-        <div class="hidden md:flex space-x-8">
-          <a href="index.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Repositorio</a>
-          <a href="que-es.html" class="text-brand-lilac font-semibold border-b-2 border-brand-lilac pb-1">¿Qué es la Endometriosis?</a>
-          <a href="proyecto.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Sobre el Proyecto</a>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="index.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Inicio</a>
+          <a href="que-es.html" class="text-brand-lilac font-semibold border-b-2 border-brand-lilac pb-1">¿Qué es la endometriosis?</a>
+          <a href="wiki.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Información</a>
+          <a href="proyecto.html" class="text-slate-500 hover:text-brand-lilac transition font-medium">Quiénes somos</a>
+          <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1877F2] text-white text-sm font-semibold hover:bg-[#0e63d4] transition shadow-sm"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Síguenos</a>
+          <a href="mailto:contacto@endopedia.com.mx" aria-label="Escríbenos por correo" title="contacto@endopedia.com.mx" class="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-brand-lilac text-brand-lilac hover:bg-brand-lilacLight transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
         </div>
+        <button id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-slate-600 hover:bg-slate-100 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white">
+      <div class="px-4 py-2 flex flex-col">
+        <a href="index.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">Inicio</a>
+        <a href="que-es.html" class="py-3 px-3 rounded-lg text-brand-lilac bg-brand-lilacLight font-semibold">¿Qué es la endometriosis?</a>
+        <a href="wiki.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">Información</a>
+        <a href="proyecto.html" class="py-3 px-3 rounded-lg text-slate-700 hover:bg-brand-lilacLight font-medium">Quiénes somos</a>
+        <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer" class="mt-1.5 py-3 px-3 rounded-lg bg-[#1877F2] text-white font-semibold text-center flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Síguenos en Facebook</a>
+        <a href="mailto:contacto@endopedia.com.mx" class="mt-2 py-3 px-3 rounded-lg border border-brand-lilac text-brand-lilac font-semibold text-center flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> Escríbenos por correo</a>
       </div>
     </div>
   </nav>
 
-  <main class="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-12">
-    <h1 class="text-3xl sm:text-4xl font-bold text-brand-lilac mb-6">¿Qué es la Endometriosis?</h1>
-    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 text-lg leading-relaxed text-slate-700">
-        <p class="mb-4">La endometriosis es una enfermedad crónica, inflamatoria y sistémica en la cual un tejido similar al revestimiento interno del útero (el endometrio) crece fuera de este. Aunque comúnmente se asocia con la zona pélvica, puede afectar otros órganos.</p>
-        
-        <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">Más que un "dolor de regla"</h2>
-        <p class="mb-4">Históricamente, el dolor de la endometriosis ha sido normalizado. Sin embargo, es importante entender que <strong>el dolor incapacitante nunca es normal</strong>. La enfermedad puede presentarse como una "triple enfermedad", coexistiendo frecuentemente con adenomiosis y miomas.</p>
-        
-        <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">Síntomas comunes</h2>
-        <ul class="list-disc pl-5 space-y-2 mb-6">
-            <li>Dolor pélvico crónico e intenso (dismenorrea).</li>
-            <li>Dolor durante o después de las relaciones sexuales (dispareunia).</li>
-            <li>Síntomas gastrointestinales o dolor al ir al baño, especialmente durante el periodo.</li>
-            <li>Fatiga crónica y "neblina mental" (síntomas neurológicos y sistémicos).</li>
-        </ul>
+  <!-- ===== CONTENIDO ===== -->
+  <main class="flex-1 w-full">
 
-        <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">Diagnóstico Integral</h2>
-        <p>Un ultrasonido transvaginal rutinario muchas veces "sale limpio" aunque haya endometriosis profunda. Por ello, el estándar actual recomienda realizar un <strong>Mapeo de Endometriosis</strong> (ultrasonido especializado o resonancia magnética) interpretado por un experto en neuropelveología o endometriosis, antes de considerar cualquier cirugía exploratoria.</p>
+    <!-- Hero -->
+    <section class="relative overflow-hidden border-b border-slate-100">
+      <img src="img/Yellow_ribbon.svg" aria-hidden="true" class="pointer-events-none select-none absolute -right-8 -top-6 w-48 opacity-[0.06] rotate-12" />
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-lilacLight text-brand-lilacDark text-sm font-semibold">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Información esencial
+        </span>
+        <h1 class="mt-5 text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
+          ¿Qué es la <span class="text-brand-lilac">endometriosis</span>?
+        </h1>
+        <p class="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed">
+          Una guía clara para entender la enfermedad, reconocer sus señales y saber cuándo buscar atención especializada.
+        </p>
+      </div>
+    </section>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-12 space-y-8">
+
+      <!-- Definición -->
+      <article class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8">
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-brand-lilacLight text-brand-lilac flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-slate-800">Una enfermedad crónica y sistémica</h2>
+            <p class="mt-2 text-slate-600 leading-relaxed">La endometriosis es una enfermedad crónica, inflamatoria y sistémica en la cual un tejido similar al revestimiento interno del útero (el endometrio) crece fuera de este. Aunque comúnmente se asocia con la zona pélvica, puede afectar otros órganos.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Más que un dolor de regla -->
+      <div class="rounded-2xl bg-gradient-to-br from-brand-yellowLight to-white border border-yellow-200 p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-amber-900 flex items-center gap-2">
+          <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M5.07 19H19a2 2 0 001.74-2.99l-6.93-12a2 2 0 00-3.48 0l-6.93 12A2 2 0 005.07 19z"/></svg>
+          Más que un "dolor de regla"
+        </h2>
+        <p class="mt-3 text-amber-900/80 leading-relaxed">Históricamente, el dolor de la endometriosis ha sido normalizado. Sin embargo, <strong class="text-amber-900">el dolor incapacitante nunca es normal</strong>. La enfermedad puede presentarse como una "triple enfermedad", coexistiendo frecuentemente con adenomiosis y miomas.</p>
+      </div>
+
+      <!-- Síntomas -->
+      <div>
+        <h2 class="text-2xl font-extrabold text-slate-800 text-center">Síntomas comunes</h2>
+        <p class="text-slate-500 text-center mt-1 mb-6">Cada cuerpo es distinto; estos son algunos de los más frecuentes.</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h4l2 5 4-12 2 7h6"/></svg></div>
+            <div><h3 class="font-bold text-slate-800">Dolor pélvico crónico</h3><p class="text-sm text-slate-500 mt-1 leading-relaxed">Dolor intenso y persistente (dismenorrea), que a veces continúa fuera del periodo.</p></div>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+            <div><h3 class="font-bold text-slate-800">Dolor en las relaciones</h3><p class="text-sm text-slate-500 mt-1 leading-relaxed">Molestia o dolor profundo durante o después de la intimidad (dispareunia).</p></div>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-2 0-3 1-3 2.5S10 13 12 13s3 1 3 2.5S14 18 12 18m0-10V6m0 12v2m9-8a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div><h3 class="font-bold text-slate-800">Síntomas digestivos</h3><p class="text-sm text-slate-500 mt-1 leading-relaxed">Dolor al evacuar u orinar, hinchazón o malestar, sobre todo durante el periodo.</p></div>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-fuchsia-100 text-fuchsia-600 flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+            <div><h3 class="font-bold text-slate-800">Fatiga y "neblina mental"</h3><p class="text-sm text-slate-500 mt-1 leading-relaxed">Cansancio crónico y dificultad para concentrarse (síntomas neurológicos y sistémicos).</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diagnóstico integral -->
+      <article class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+          <svg class="w-6 h-6 text-brand-lilac flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/></svg>
+          Diagnóstico integral
+        </h2>
+        <p class="mt-3 text-slate-600 leading-relaxed">Un ultrasonido transvaginal rutinario muchas veces "sale limpio" aunque haya endometriosis profunda. Por ello, el estándar actual recomienda realizar un <strong class="text-brand-lilacDark">Mapeo de Endometriosis</strong> (ultrasonido especializado o resonancia magnética) interpretado por un experto en neuropelveología o endometriosis.</p>
+        <div class="mt-4 rounded-xl bg-brand-lilacLight border border-purple-100 p-4 text-sm text-slate-700 leading-relaxed">
+          <strong class="text-brand-lilacDark">Importante:</strong> evita una cirugía exploratoria sin un mapeo previo. Un buen mapa de la enfermedad permite planear mejor el tratamiento.
+        </div>
+      </article>
+
+      <!-- Profundiza en la wiki -->
+      <section class="rounded-3xl bg-gradient-to-br from-[#f4ebf9] to-[#fceef0] border border-white shadow-sm p-6 sm:p-10">
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 text-brand-lilacDark text-xs font-bold uppercase tracking-widest">Wiki médica</span>
+          <h2 class="mt-3 text-2xl sm:text-3xl font-extrabold text-slate-900">¿Quieres profundizar?</h2>
+          <p class="mt-3 text-slate-600 leading-relaxed">Reunimos literatura clínica actualizada en una wiki por temas: definición, diagnóstico, tratamientos, cirugía y más.</p>
+        </div>
+        <div class="mt-7 grid sm:grid-cols-3 gap-4">
+          <a href="wiki-01-definicion.html" class="group bg-white rounded-2xl border border-white shadow-sm p-5 hover:shadow-md transition">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-lilacLight text-brand-lilac font-bold text-sm">1</span>
+            <h3 class="mt-3 font-bold text-slate-800">Definición y epidemiología</h3>
+            <span class="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-brand-lilac">Leer <span class="group-hover:translate-x-0.5 transition" aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="wiki-03-sintomas.html" class="group bg-white rounded-2xl border border-white shadow-sm p-5 hover:shadow-md transition">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-lilacLight text-brand-lilac font-bold text-sm">3</span>
+            <h3 class="mt-3 font-bold text-slate-800">Síntomas y fenotipos</h3>
+            <span class="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-brand-lilac">Leer <span class="group-hover:translate-x-0.5 transition" aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="wiki-04-diagnostico-acog.html" class="group bg-white rounded-2xl border border-white shadow-sm p-5 hover:shadow-md transition">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-lilacLight text-brand-lilac font-bold text-sm">4</span>
+            <h3 class="mt-3 font-bold text-slate-800">Diagnóstico (ACOG 2026)</h3>
+            <span class="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-brand-lilac">Leer <span class="group-hover:translate-x-0.5 transition" aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+        <div class="mt-7 text-center">
+          <a href="wiki.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-lilac text-white font-semibold shadow-sm hover:bg-brand-lilacDark transition">
+            Explorar toda la wiki
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- CTA repositorio -->
+      <div class="text-center">
+        <p class="text-slate-600 mb-3">¿Prefieres ver videos y experiencias reales?</p>
+        <a href="index.html#repositorio" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white text-brand-lilacDark font-semibold border border-purple-200 hover:bg-brand-lilacLight transition">
+          Ver el repositorio de recursos
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
     </div>
   </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="mt-12 border-t border-slate-200 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+      <div class="rounded-2xl bg-amber-50 border border-amber-200 p-5 mb-8 flex items-start gap-4">
+        <div class="bg-amber-100 p-2 rounded-full flex-shrink-0 mt-0.5">
+          <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          <strong class="font-semibold text-amber-900 block mb-1">Aviso médico importante:</strong>
+          La información de Endopedia es meramente educativa e informativa. No sustituye una consulta médica profesional ni constituye un diagnóstico o tratamiento. Consulta siempre a tu médico especialista.
+        </p>
+      </div>
+      <div class="border-t border-slate-100 pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <div class="flex items-center gap-2.5">
+          <img src="img/foto_perfil.png" alt="Endopedia" class="w-9 h-9 rounded-full">
+          <span class="text-sm font-semibold text-slate-600">Endopedia</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          <a href="https://link.endopedia.com.mx/FBendopedia" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-lilac transition">
+            <img src="img/Facebook_Logo_Primary.png" alt="" class="w-6 h-6" /> Facebook
+          </a>
+          <a href="mailto:contacto@endopedia.com.mx"
+             class="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-lilac transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            contacto@endopedia.com.mx
+          </a>
+        </div>
+      </div>
+      <p class="mt-6 text-xs text-slate-400 text-center">
+        © <span data-year></span> Endopedia · Hecho con cuidado para nuestra comunidad 💛 · Porque nadie debería vivir esta enfermedad sola.
+      </p>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
 </body>
 </html>

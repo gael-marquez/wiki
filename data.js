@@ -1,84 +1,199 @@
-// Repositorio de Recursos sobre Endometriosis
-// Datos organizados por categoría. Para añadir un nuevo recurso, copia un objeto
-// del arreglo y modifica los campos: title, category y url.
-
+// Datos generados desde "Repositorio final Gael.xlsx"
 const resources = [
-  // 1. DIAGNÓSTICO Y MAPEO
-  { title: "Definiciones: retiro solo de útero no cura Endo", category: "Diagnóstico y Mapeo", url: "https://vt.tiktok.com/ZS9n4EFCN/" },
-  { title: "Tu estudio dice que todo bien", category: "Diagnóstico y Mapeo", url: "https://vt.tiktok.com/ZSxdC7FCV/" },
-  { title: "Medio especialista", category: "Diagnóstico y Mapeo", url: "https://www.instagram.com/reel/DYVgs_1x8aq/?igsh=ZmU3b3dnYTY3a25h" },
-  { title: "Mapeos", category: "Diagnóstico y Mapeo", url: "https://www.instagram.com/reel/DXs_-p1DbBb/?igsh=N2M1bXZxbjloczA2" },
-  { title: "Mapeos 2", category: "Diagnóstico y Mapeo", url: "https://www.instagram.com/reel/DW624MtEcYl/?igsh=MXhrMjJnZzk0Y2ppNg==" },
-  { title: "Mapeos 3", category: "Diagnóstico y Mapeo", url: "https://www.instagram.com/reel/DWkUWIkDcj6/?igsh=cm5nbjZsZnN3bjBo" },
-  { title: "Mapeo Enzian", category: "Diagnóstico y Mapeo", url: "https://vt.tiktok.com/ZSxdCvLR5/" },
-  { title: "Mapeo Enzian 2", category: "Diagnóstico y Mapeo", url: "https://vt.tiktok.com/ZSxdCmhUs/" },
-  { title: "Mapeo sin laparoscopia explorativa", category: "Diagnóstico y Mapeo", url: "https://www.instagram.com/reel/DVUqUo2keh3/?igsh=dno2OThnMHg3NGpk" },
-  { title: "No operar sin mapeo", category: "Diagnóstico y Mapeo", url: "https://www.instagram.com/reel/DRCp2LLEdI7/?igsh=Znk0a24yNWx4NWpu" },
-  { title: "Mapeo cada 6 meses", category: "Diagnóstico y Mapeo", url: "https://www.instagram.com/reel/DUe7QWyjVe0/?igsh=MTc2d3NlN3d2dnd0" },
-  { title: "Diferencia entre ultrasonido normal", category: "Diagnóstico y Mapeo", url: "https://www.instagram.com/p/DU_KRA6kaNX/?img_index=6&igsh=bjlxYm05bXJlZXhk" },
-  { title: "Origen embriológico", category: "Diagnóstico y Mapeo", url: "https://www.instagram.com/p/DTf2RV9kbyR/?img_index=2&igsh=MTE4MGZ3c3BjdjUw" },
-
-  // 2. ADENOMIOSIS / ENDOMETRIOSIS / MIOMAS
-  { title: "Triple enfermedad", category: "Adenomiosis / Endometriosis / Miomas", url: "https://vt.tiktok.com/ZS9nVC7CJ/" },
-  { title: "Triple enfermedad (Instagram)", category: "Adenomiosis / Endometriosis / Miomas", url: "https://www.instagram.com/reel/DXPUf6ukYdJ/?igsh=MzdodXc2b2UzN2ww" },
-  { title: "La adenomiosis nunca viene sola", category: "Adenomiosis / Endometriosis / Miomas", url: "https://vt.tiktok.com/ZS9nVWp6h/" },
-  { title: "80-90% probabilidad de Endo si tienes miomas o adenomiosis", category: "Adenomiosis / Endometriosis / Miomas", url: "https://vt.tiktok.com/ZS9nV6A8g/" },
-  { title: "Solo un quiste endometrioma", category: "Adenomiosis / Endometriosis / Miomas", url: "https://www.instagram.com/reel/DXy_SmVRy9f/?igsh=MWlpOGpzeXFibzNiMA==" },
-  { title: "Endometrioma", category: "Adenomiosis / Endometriosis / Miomas", url: "https://www.instagram.com/reel/DXy_SmVRy9f/?igsh=MWlpOGpzeXFibzNiMA==" },
-  { title: "Miomas laparoscopia", category: "Adenomiosis / Endometriosis / Miomas", url: "https://www.instagram.com/reel/DWjQWRYEQmG/?igsh=NW1oOGtweGw1Nmdp" },
-
-  // 3. CIRUGÍA Y RECUPERACIÓN
-  { title: "Ablación y escisión", category: "Cirugía y Recuperación", url: "https://vt.tiktok.com/ZS9TgSapm/" },
-  { title: "Cirugía robótica", category: "Cirugía y Recuperación", url: "https://www.instagram.com/reel/DXh1f7KkfDM/?igsh=MjlqY3dzNjJ6YW9v" },
-  { title: "Cirugía robótica 2", category: "Cirugía y Recuperación", url: "https://www.instagram.com/reel/DXcbM2wkfiR/?igsh=azlodjhianczbXBq" },
-  { title: "Es mejor operar en cuanto sea posible", category: "Cirugía y Recuperación", url: "https://www.instagram.com/reel/DWaPjqwES7n/?igsh=MXdyeXBlNzhybmxiZg==" },
-  { title: "Recurrencia", category: "Cirugía y Recuperación", url: "https://www.instagram.com/reel/DWOv-5YES61/?igsh=c2JnZWp5YTJiNGJ2" },
-  { title: "Recurrencia 2", category: "Cirugía y Recuperación", url: "https://www.instagram.com/reel/DU1k5-UEeDS/?igsh=MTJjcHhrZXJuYm5mbA==" },
-  { title: "Recurrencia (TikTok 1)", category: "Cirugía y Recuperación", url: "https://vt.tiktok.com/ZS9Ks6edg/" },
-  { title: "Recurrencia (TikTok 2)", category: "Cirugía y Recuperación", url: "https://vt.tiktok.com/ZS9Kp3Qb1/" },
-  { title: "Rehabilitación después de cirugía Endo", category: "Cirugía y Recuperación", url: "https://www.instagram.com/reel/DYNPN7tu5mo/?igsh=NjhzNjh0bzg1MXNv" },
-  { title: "Medicina funcional después de cirugía", category: "Cirugía y Recuperación", url: "https://www.instagram.com/reel/DUWpY4_DcoE/?igsh=b3Y2ZGphd28wbHlo" },
-
-  // 4. SUELO PÉLVICO Y PROLAPSOS
-  { title: "Prolapsos", category: "Suelo Pélvico y Prolapsos", url: "https://www.instagram.com/reel/DUORefPDgiY/?igsh=MXNwaTZqb3BjZGZ2bg==" },
-  { title: "Prolapso", category: "Suelo Pélvico y Prolapsos", url: "https://www.instagram.com/reel/DShh3Z_jifL/?igsh=MXB0dWU5bnYyMnh1ZA==" },
-  { title: "Kegel y prolapso", category: "Suelo Pélvico y Prolapsos", url: "https://www.facebook.com/share/v/14aNWmGEgVN/?mibextid=wwXIfr" },
-  { title: "Histerectomía: ejercicio y respiración", category: "Suelo Pélvico y Prolapsos", url: "https://vt.tiktok.com/ZS9vRDUmV/" },
-  { title: "Histerectomía: ejercicio y respiración 2", category: "Suelo Pélvico y Prolapsos", url: "https://vt.tiktok.com/ZS9vR2K1L/" },
-  { title: "Histerectomía: ejercicio y respiración 3", category: "Suelo Pélvico y Prolapsos", url: "https://vt.tiktok.com/ZS9vRvbHJ/" },
-  { title: "Ejercicio y respiración (Instagram)", category: "Suelo Pélvico y Prolapsos", url: "https://www.instagram.com/reel/DWhFvw4CPMG/?igsh=anNoZjVmNGg5aWRk" },
-  { title: "Ejercicio y respiración (Instagram 2)", category: "Suelo Pélvico y Prolapsos", url: "https://www.instagram.com/reel/DU-fBw_iBms/?igsh=MXZqeDN1a3p2dmR2eQ==" },
-  { title: "¿Kegel siempre?", category: "Suelo Pélvico y Prolapsos", url: "https://www.instagram.com/reel/DVOKqCniG8Q/?igsh=MXQ2MWJvOWQ1czB3cQ==" },
-  { title: "Abdominales", category: "Suelo Pélvico y Prolapsos", url: "https://www.instagram.com/reel/DQzqnOWAcGe/?igsh=MXJ4NWdidjFicWkwYg==" },
-  { title: "Masaje perineal", category: "Suelo Pélvico y Prolapsos", url: "https://www.facebook.com/share/r/1VrLtZ281S/?mibextid=wwXIfr" },
-  { title: "¿Estás lista para correr?", category: "Suelo Pélvico y Prolapsos", url: "https://www.facebook.com/share/r/1JzxquReF7/?mibextid=wwXIfr" },
-  { title: "Valoración suelo pélvico", category: "Suelo Pélvico y Prolapsos", url: "https://www.facebook.com/share/v/1BGLnji1qV/?mibextid=wwXIfr" },
-
-  // 5. SÍNTOMAS NEUROLÓGICOS Y SISTÉMICOS
-  { title: "Endometriosis y cerebro", category: "Síntomas Neurológicos y Sistémicos", url: "https://www.instagram.com/reel/DYFnJ-JvnsT/?igsh=OHA1c2RyZ3BwM2Vj" },
-  { title: "Endo y neuropatías", category: "Síntomas Neurológicos y Sistémicos", url: "https://www.instagram.com/reel/DYASTvUxLiA/?igsh=MXI5amk5b3dhMnQ1cw==" },
-  { title: "Endo y sueño", category: "Síntomas Neurológicos y Sistémicos", url: "https://www.instagram.com/reel/DXPUmJdBwwS/?igsh=YXgycXhuN2xlNm5v" },
-  { title: "Neblina mental", category: "Síntomas Neurológicos y Sistémicos", url: "https://www.instagram.com/reel/DWWv-UNkcNo/?igsh=MWgxaDhjbHdsenZmag==" },
-  { title: "Compresión nerviosa", category: "Síntomas Neurológicos y Sistémicos", url: "https://vt.tiktok.com/ZSxdpBwoX/" },
-  { title: "Neuropelveología", category: "Síntomas Neurológicos y Sistémicos", url: "https://vt.tiktok.com/ZSxdpFgNa/" },
-  { title: "Problema al orinar", category: "Síntomas Neurológicos y Sistémicos", url: "https://vt.tiktok.com/ZS9KGNxrL/" },
-
-  // 6. HORMONAS / ENDOCRINO / MENOPAUSIA
-  { title: "Prolactina y cortisol", category: "Hormonas / Endocrino / Menopausia", url: "https://www.instagram.com/reel/DNYpFYcuozD/?igsh=emdmbjhxcXU1ejF4" },
-  { title: "Menopausia no siempre es con hormonas", category: "Hormonas / Endocrino / Menopausia", url: "" },
-  { title: "Perimenopausia", category: "Hormonas / Endocrino / Menopausia", url: "https://www.instagram.com/reel/DC8BnLcxFti/?igsh=ZWR3dWFkeXJ4YnA0" },
-  { title: "Bajar estrógenos: tratamiento", category: "Hormonas / Endocrino / Menopausia", url: "https://vt.tiktok.com/ZSx1yaHBQ/" },
-  { title: "Vitamina D y toxicidad", category: "Hormonas / Endocrino / Menopausia", url: "https://www.instagram.com/reel/DPJ2R1XjlUg/?igsh=MXh6M3FkZW13Z3h1MA=" },
-  { title: "Caída de cabello", category: "Hormonas / Endocrino / Menopausia", url: "https://www.instagram.com/reel/Cxd5eLhO0tM/?igsh=MXg1Ynlnand0MXFncA==" },
-
-  // 7. NUTRICIÓN / MICROBIOTA / INFLAMACIÓN
-  { title: "Personalizar dieta", category: "Nutrición / Microbiota / Inflamación", url: "https://www.instagram.com/reel/DPFXyVAkTFd/?igsh=MXZ2Z3g1djQ2ZjVheQ==" },
-  { title: "No funciona dieta antiinflamatoria", category: "Nutrición / Microbiota / Inflamación", url: "https://www.instagram.com/reel/DNUQ8gyuvbc/?igsh=ZGxhdmQzZzdwMHRi" },
-  { title: "Cómo identificar lo que inflama", category: "Nutrición / Microbiota / Inflamación", url: "https://www.instagram.com/reel/DUvnhGXjfH2/?igsh=MWtrM3FtOXg1ZnZpdQ==" },
-  { title: "Hidratación", category: "Nutrición / Microbiota / Inflamación", url: "https://www.instagram.com/reel/DKsOd6QOUbJ/?igsh=MXB0dmp2dTZpb3lrbg==" },
-  { title: "Kefir y Endo", category: "Nutrición / Microbiota / Inflamación", url: "https://www.instagram.com/reel/DQFgPBqESD8/?igsh=NHQxYjhreXhobm9w" },
-  { title: "Microbiota y menopausia", category: "Nutrición / Microbiota / Inflamación", url: "https://www.instagram.com/reel/DNdZLUmPfpY/?igsh=d294YzR3YjhvcmJ5" },
-  { title: "Intolerancia a la fructosa", category: "Nutrición / Microbiota / Inflamación", url: "https://www.instagram.com/reel/DVT7C6RAWKb/?igsh=ZDNjbm55bXV3b2pz" },
-  { title: "Histamina y Endo", category: "Nutrición / Microbiota / Inflamación", url: "https://vt.tiktok.com/ZS9EfkMEN/" },
-  { title: "Creatina", category: "Nutrición / Microbiota / Inflamación", url: "https://www.instagram.com/reel/DOO4wCZEfZc/?igsh=d2N1Nzc1eWJsY3Bu" }
+  // Categoría: Síntomas
+  { title: "Podrías tener endometriosis síntomas 1", category: "Síntomas", url: "https://link.endopedia.com.mx/podrias-tener-endometriosis-sintomas", doctor: "Dr. Juan Luis Gallardo", profession: "Medicina funcional" },
+  { title: "Podrías tener endometriosis síntomas 2", category: "Síntomas", url: "https://link.endopedia.com.mx/podrias-tener-endometriosis-sintomas-2", doctor: "Dr. Juan Luis Gallardo", profession: "Medicina funcional" },
+  { title: "Síntomas de piso pélvico tenso", category: "Síntomas", url: "https://link.endopedia.com.mx/fisioterapia", doctor: "therapelvix", profession: "Clínica de fisioterapia" },
+  { title: "Neblina mental y endometriosis 1", category: "Síntomas", url: "https://link.endopedia.com.mx/endometriosis-y-cerebro", doctor: "Dra. Sofía Vera", profession: "ginecología" },
+  { title: "¿Sientes que haces pipí… pero tu vejiga no se vacía del todo? Fisioterapia", category: "Síntomas", url: "https://link.endopedia.com.mx/vejiga", doctor: "Therapelvix", profession: "Clínica de fisioterapia" },
+  { title: "Síntomas digestivos durante el periodo en Endometriosis", category: "Síntomas", url: "https://link.endopedia.com.mx/sintomas-digestivos-durante-el-periodo", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  { title: "Perimenopausia", category: "Síntomas", url: "https://link.endopedia.com.mx/perimenopausia", doctor: "Dr. Juan Luis Gallardo", profession: "Medicina funcional" },
+  { title: "Síntomas de perimenopausia", category: "Síntomas", url: "https://link.endopedia.com.mx/perimonopausia", doctor: "Dr. Juan Luis Gallardo", profession: "Medicina funcional" },
+  { title: "A que edad entras a la perimenopausia", category: "Síntomas", url: "https://link.endopedia.com.mx/perimonopausia-2", doctor: "Dra. Glad Sastré", profession: "Medicina integrativa" },
+  { title: "Dolor en relaciones, fisioterapia", category: "Síntomas", url: "https://link.endopedia.com.mx/dolor-en-relaciones", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "La peor pesadilla para tu suelo pélvico", category: "Síntomas", url: "https://link.endopedia.com.mx/la-peor-pesadilla-del-suelo-pelvico", doctor: "therapelvix", profession: "Clínica de fisioterapia" },
+  { title: "Estreñimiento crónico y piso pélvico", category: "Síntomas", url: "https://link.endopedia.com.mx/estrenimiento-y-piso-pelvico", doctor: "therapelvix", profession: "Clínica de fisioterapia" },
+  { title: "Bajo peso en endometriosis", category: "Síntomas", url: "https://link.endopedia.com.mx/bajopeso", doctor: "Ariadna López", profession: "Nutrición" },
+  // Categoría: Diagnóstico
+  { title: "Tu estudio dice que todo bien, pero sigues con dolor", category: "Diagnóstico", url: "https://link.endopedia.com.mx/tu-estudio-dice-que-todo-bien", doctor: "Instituto Doyenne", profession: "clinica especializada en Endo" },
+  { title: "Enfermedades que se confunden con Endometriosis", category: "Diagnóstico", url: "https://link.endopedia.com.mx/tambien-se-confundieron-con-tu-diagnostico-de-endometri", doctor: "Instituto Doyenne", profession: "clinica especializada en Endo" },
+  { title: "Que formacion necesita un medico para tratar la Endometriosis", category: "Diagnóstico", url: "https://link.endopedia.com.mx/medico-especialista", doctor: "Dr. Luis Gallardo", profession: "ginecologia" },
+  { title: "Así se ve la endometriosis por dentro", category: "Diagnóstico", url: "https://link.endopedia.com.mx/asi-se-ve-la-endometriosis", doctor: "Dr. Juan Luis Gallardo", profession: "Medicina funcional" },
+  { title: "Todo sale normal pero el dolor sigue, Endo y neuropatías", category: "Diagnóstico", url: "https://link.endopedia.com.mx/endo-y-neuropatias", doctor: "Dr. Juan Carlos Canton", profession: "ginecología" },
+  { title: "Se sabe que la endometriosis puede ser hereditaria", category: "Diagnóstico", url: "https://link.endopedia.com.mx/madre-e-hija-componente-generico", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "Decir a tu medico todos tus síntomas menstruales aunque no sea ginecológicos", category: "Diagnóstico", url: "https://link.endopedia.com.mx/sintoma-molestia-intestinal-y-era-endo", doctor: "Dra. Paula Galán Sance", profession: "ginecología" },
+  { title: "Protocolos globales para tratar la Endo", category: "Diagnóstico", url: "https://link.endopedia.com.mx/protocolos", doctor: "Dr. Ramiro Cabrera", profession: "ginecología" },
+  { title: "1 de cada 10 mujeres padece Endo, hasta 10 años en diagnostico", category: "Diagnóstico", url: "https://link.endopedia.com.mx/1decada10mujeres", doctor: "Dr. Ramiro Cabrera", profession: "ginecología" },
+  // Categoría: Educación básica
+  { title: "Retiro solo de útero no cura Endo, diferencias Endo y Adeomeosis", category: "Educación básica", url: "https://link.endopedia.com.mx/retiro-solo-de-utero-no-cura-endo", doctor: "Instituto Doyenne", profession: "clinica especializada en Endo" },
+  { title: "La endometriosis no es igual en todas", category: "Educación básica", url: "https://link.endopedia.com.mx/la-endometriosis-no-es-igual-en-todas", doctor: "Dr. Mayra González", profession: "ginecología" },
+  { title: "Origen embriológico", category: "Educación básica", url: "https://link.endopedia.com.mx/origen-embriologico", doctor: "Dr. Ramiro Cabrera", profession: "ginecología" },
+  { title: "80% mujeres pueden tener miomas", category: "Educación básica", url: "https://link.endopedia.com.mx/80-mujeres-miomatosis", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  { title: "Ablación y escisión", category: "Educación básica", url: "https://link.endopedia.com.mx/ablacion-y-escision", doctor: "Dr. Ana Sierra", profession: "Neuropelveología" },
+  { title: "¿La endometriosis tiene cura?", category: "Educación básica", url: "https://link.endopedia.com.mx/la-endometriosis-tiene-cura", doctor: "Dr. Ana Sierra", profession: "Neuropelveología" },
+  { title: "La endometriosis no desaparece con medicamentos", category: "Educación básica", url: "https://link.endopedia.com.mx/la-endometriosis-no-desaparece-con-medicamentos", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  { title: "Así proteges al suelo pélvico al toser", category: "Educación básica", url: "https://link.endopedia.com.mx/asi-proteges-al-suelo-pelvico-al-toser", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "Abdominales puede perjudicar tu suelo pélvico", category: "Educación básica", url: "https://link.endopedia.com.mx/abdominales-puede-perjudicar-tu-suelo-pelvico", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "Masaje perineal", category: "Educación básica", url: "https://link.endopedia.com.mx/masaje-perineal", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "Estás lista para correr", category: "Educación básica", url: "https://link.endopedia.com.mx/estas-lista-para-correr", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "¿Como es una valoración suelo pélvico?", category: "Educación básica", url: "https://link.endopedia.com.mx/valoracion-suelo-pelvico", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "Caída de cabello y deficiencias", category: "Educación básica", url: "https://link.endopedia.com.mx/caida-de-cabello", doctor: "Dr. Juan Luis Gallardo", profession: "Medicina funcional" },
+  { title: "El cáncer blanco, la endometriosis", category: "Educación básica", url: "https://link.endopedia.com.mx/definiciones-retiro-solo-de-utero-no-cura-endo", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  { title: "Endo, múltiples sistemas alterados", category: "Educación básica", url: "https://link.endopedia.com.mx/definiciones-retiro-solo-de-utero-no-cura-endo-2", doctor: "Clínica Endometriosis", profession: "clínica especializada en Endo" },
+  { title: "Porque a la endometriosis se le conoce como el cáncer blanco", category: "Educación básica", url: "https://link.endopedia.com.mx/cancer-blanco", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "Epigenética y endometriosis", category: "Educación básica", url: "https://link.endopedia.com.mx/epigenetica", doctor: "Clínica Endometriosis", profession: "clínica especializada en Endo" },
+  { title: "Mitos ejercicios y Endometriosis", category: "Educación básica", url: "https://link.endopedia.com.mx/mitos-ejercicio-y-endo", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "Placer sin útero, fisioterapia", category: "Educación básica", url: "https://link.endopedia.com.mx/placer-sin-utero", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "Miomatosis uterina", category: "Educación básica", url: "https://link.endopedia.com.mx/miomas", doctor: "Dra. Paula Galán Sance", profession: "ginecología" },
+  { title: "Tipos de Adenomiosis", category: "Educación básica", url: "https://link.endopedia.com.mx/tipo-de-adenomeosis", doctor: "Endolatam", profession: "clínica especializada en Endo" },
+  { title: "Porque buscar médico funcional", category: "Educación básica", url: "https://link.endopedia.com.mx/porque-buscar-medico-funcional", doctor: "Dr. Juan Luis Gallardo", profession: "Medicina funcional" },
+  { title: "¿Que hace una fisio pélvica?", category: "Educación básica", url: "https://link.endopedia.com.mx/que-es-una-fisio-de-piso-pelvico", doctor: "therapelvix", profession: "Clínica de fisioterapia" },
+  { title: "La medicina funcional propone un enfoque más completo: ver al paciente como un todo", category: "Educación básica", url: "https://link.endopedia.com.mx/que-es-la-medicina-funcional", doctor: "Dra. Glad Sastré", profession: "Medicina integrativa" },
+  { title: "Que es la perimenopausia", category: "Educación básica", url: "https://link.endopedia.com.mx/que-es-la-perimenopausia", doctor: "Dra. Glad Sastré", profession: "Medicina integrativa" },
+  { title: "Cosas que no se hablan de la Endo", category: "Educación básica", url: "https://link.endopedia.com.mx/cosas-que-no-se-hablan-de-la-endo", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "¿Qué es la medicina funcional?", category: "Educación básica", url: "https://link.endopedia.com.mx/medicinafuncional", doctor: "Dr. Patricio Ochoa", profession: "Medico cirujano" },
+  { title: "Mitos y realidades de la histerectomía", category: "Educación básica", url: "https://link.endopedia.com.mx/mitosyrealidades-histerectomia", doctor: "Edna Cortes", profession: "ginecología" },
+  // Categoría: Mapeo
+  { title: "Cómo se debe iniciar el estudio de la Endometriosis", category: "Mapeo", url: "https://link.endopedia.com.mx/como-se-debe-iniciar-el-estudio-de-la-endometriosis", doctor: "Endomap360", profession: "clínica especializada en Endo" },
+  { title: "¡Y si antes de operar ya supieras TODO el mapa de la enfermedad?", category: "Mapeo", url: "https://link.endopedia.com.mx/endo-map", doctor: "Endomap360", profession: "clínica especializada en Endo" },
+  { title: "Porque en pocos centros se hacen mapeos profesionales", category: "Mapeo", url: "https://link.endopedia.com.mx/porque-en-pocos-centros-se-hacen-mapeos-profesionales", doctor: "Endomap360", profession: "clínica especializada en Endo" },
+  { title: "Mapeo por resonancia magnética clasificación Envían", category: "Mapeo", url: "https://link.endopedia.com.mx/mapeo-por-resonancia-magnetica-clasificacion-enzian", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "Cómo se interpreta un mapeo Clasificación Envían", category: "Mapeo", url: "https://link.endopedia.com.mx/como-se-interpreta-un-mapeo-clasificacion-enzian", doctor: "Dr. Ramiro Cabrera", profession: "ginecología" },
+  { title: "Diferencia entre ultrasonido normal", category: "Mapeo", url: "https://link.endopedia.com.mx/diferencia-entre-ultrasonido-normal", doctor: "Clínica Endometriosis", profession: "clínica especializada en Endo" },
+  { title: "Un buen mapeo garantiza que la cirugía sea más efectiva", category: "Mapeo", url: "https://link.endopedia.com.mx/no-operar-sin-mapeo", doctor: "Dr. Ramiro Cabrera", profession: "ginecología" },
+  { title: "Vigencia del mapeo de Endometriosis", category: "Mapeo", url: "https://link.endopedia.com.mx/mapeo-cada-6-meses", doctor: "Endomap360", profession: "clínica especializada en Endo" },
+  { title: "Mapeo endometriosis en Mexico, ya no se debe hacer laparoscopia explorativa", category: "Mapeo", url: "https://link.endopedia.com.mx/mapeoenmexico", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  // Categoría: Asociación de enfermedades
+  { title: "Frecuencia del 90% de la triple enfermedad", category: "Asociación de enfermedades", url: "https://link.endopedia.com.mx/triple-enfermedad", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "Triple enfermedad endometriosis, adenomiosis y miomas", category: "Asociación de enfermedades", url: "https://link.endopedia.com.mx/triple-enfermedad-instagram", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  { title: "Hasta 89% de las pacientes con adenomiosis pueden presentan Endometriosis", category: "Asociación de enfermedades", url: "https://link.endopedia.com.mx/la-adenomiosis-nunca-viene-sola", doctor: "Dr. Ramiro Cabrera", profession: "ginecología" },
+  { title: "La endometriosis y adenomiosis no son enfermedades separadas", category: "Asociación de enfermedades", url: "https://link.endopedia.com.mx/te-dijeron-que-tienes-adenomiosis-pero-puede-ser-algo-m", doctor: "Endomap360", profession: "clínica especializada en Endo" },
+  { title: "Si tienes miomas, también podría haber adenomiosis y endometriosis", category: "Asociación de enfermedades", url: "https://link.endopedia.com.mx/80-90-probabilidad-de-endo-si-tienes-miomas-o-adenomios", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "La adenomiosis nunca viene sola", category: "Asociación de enfermedades", url: "https://link.endopedia.com.mx/la-adenomeosis-nunca-viene-sola", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  // Categoría: Endometrioma
+  { title: "Endometriomas bilaterales", category: "Endometrioma", url: "https://link.endopedia.com.mx/endometriomas-bilaterales", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  { title: "Endometrioma, no solo es quitar un quiste", category: "Endometrioma", url: "https://link.endopedia.com.mx/endometrioma", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  // Categoría: Miomectomía
+  { title: "Miomectomía, retirar miomas sin quitar útero", category: "Miomectomía", url: "https://link.endopedia.com.mx/miomectomia", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  // Categoría: Infertilidad
+  { title: "Infertilidad por miomas", category: "Infertilidad", url: "https://link.endopedia.com.mx/miomas-e-infertilidad", doctor: "Clínica Endometriosis", profession: "clínica especializada en Endo" },
+  { title: "¿Por qué no me puedo embarazar? Endometriosis", category: "Infertilidad", url: "https://link.endopedia.com.mx/embarazo-y-endometriosis", doctor: "Dr. Ana Sierra", profession: "Neuropelveología" },
+  // Categoría: Cirugía Robótica
+  { title: "Porque preferir cirugía robótica", category: "Cirugía Robótica", url: "https://link.endopedia.com.mx/cirugia-robotica", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  { title: "Ventajas cirugía robótica Endo", category: "Cirugía Robótica", url: "https://link.endopedia.com.mx/ventajas-cirugia-robotica-endo", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  { title: "Cirugía robótica vista 3D", category: "Cirugía Robótica", url: "https://link.endopedia.com.mx/no-es-una-cirugia-sencilla", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  // Categoría: Cirugía reconstructiva
+  { title: "Cuando se recomienda cirugía reconstructiva", category: "Cirugía reconstructiva", url: "https://link.endopedia.com.mx/cirugia-reconstructiva", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  // Categoría: Cirugía abierta
+  { title: "Di no a la histerectomía abierta", category: "Cirugía abierta", url: "https://link.endopedia.com.mx/cirugia-abierta-no", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  // Categoría: Cirugía y recuperación
+  { title: "La cirugía correcta no es agresiva", category: "Cirugía y recuperación", url: "https://link.endopedia.com.mx/la-cirugia-correcta-no-es-agresiva", doctor: "Clínica Endometriosis", profession: "clínica especializada en Endo" },
+  { title: "Cirugía incompleta en Endometriosis", category: "Cirugía y recuperación", url: "https://link.endopedia.com.mx/cirugia-incompleta", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  { title: "Casos inoperables", category: "Cirugía y recuperación", url: "https://link.endopedia.com.mx/casos-inoperables", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  { title: "Te hicieron cirugía y sigues con dolor", category: "Cirugía y recuperación", url: "https://link.endopedia.com.mx/te-hicieron-cirugia-y-sigues-con-dolor", doctor: "Clínica Endometriosis", profession: "clínica especializada en Endo" },
+  { title: "Ya te operaron de endometriosis y sigues con dolor", category: "Cirugía y recuperación", url: "https://link.endopedia.com.mx/ya-te-operaron-de-endometriosis-y-sigues-con-dolor", doctor: "Clínica Endometriosis", profession: "clínica especializada en Endo" },
+  { title: "Histerectomía ejercicio de suelo pélvico en las dos primeras semanas", category: "Cirugía y recuperación", url: "https://link.endopedia.com.mx/histerectomia-ejercicio-de-suelo-pelvico-en-las-dos-pri", doctor: "Cristal Sarabia", profession: "Fisioterapia" },
+  { title: "Histerectomía y ejercicios de piso pélvico", category: "Cirugía y recuperación", url: "https://link.endopedia.com.mx/histerectomia-y-ejercicios-de-piso-pelvico", doctor: "Cristal Sarabia", profession: "Fisioterapia" },
+  { title: "Tu abdomen cambió después de la histerectomía", category: "Cirugía y recuperación", url: "https://link.endopedia.com.mx/tu-abdomen-cambio-despues-de-la-histerectomia", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "Tratamiento integral después de cirugía", category: "Cirugía y recuperación", url: "https://link.endopedia.com.mx/tratamiento-integral-despues-de-cirugia", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "Dolor después de la cirugía", category: "Cirugía y recuperación", url: "https://link.endopedia.com.mx/dolor-despues-de-la-cirugia", doctor: "Clínica Endometriosis", profession: "clínica especializada en Endo" },
+  // Categoría: Recurrencia
+  { title: "Hasta 80% de las pacientes pueden tener recurrencia", category: "Recurrencia", url: "https://link.endopedia.com.mx/hasta-80-de-las-pacientes-pueden-tener-recurrencia", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  { title: "¿Te van a operar otra vez y quieren que sea cirugía abierta?", category: "Recurrencia", url: "https://link.endopedia.com.mx/tevanaoperarotravez", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  // Categoría: Tratamiento
+  { title: "La endometriosis no tiene un único camino", category: "Tratamiento", url: "https://link.endopedia.com.mx/la-endometriosis-no-tiene-un-unico-camino", doctor: "Dr. Fernando Díaz", profession: "ginecología" },
+  { title: "La fisioterapia pélvica para tu recuperación después de cirugía y como tratamiento a largo plazo.", category: "Tratamiento", url: "https://link.endopedia.com.mx/rehabilitacion-despues-de-cirugia-endo", doctor: "Therapelvix", profession: "Clínica de fisioterapia" },
+  { title: "Tratamiento multidisciplinar después de cirugía", category: "Tratamiento", url: "https://link.endopedia.com.mx/nutricion-y-fisioterapia-despues-de-cirugia", doctor: "Therapelvix", profession: "Clínica de fisioterapia" },
+  { title: "La endometriosis no es solo quirúrgica, medicina funcional", category: "Tratamiento", url: "https://link.endopedia.com.mx/medicina-funcional-despues-de-cirugia", doctor: "Dr. Juan Luis Gallardo", profession: "Medicina funcional" },
+  { title: "Reducir carga total de estrógeno para controlar los síntomas", category: "Tratamiento", url: "https://link.endopedia.com.mx/bajar-estrogenos-tratamiento", doctor: "Dra. Lucía Chaul", profession: "ginecología" },
+  { title: "¿Hormonas o cirugía? En endometriosis, el tratamiento es individualizado.", category: "Tratamiento", url: "https://link.endopedia.com.mx/no-operar-sin-mapeo-2", doctor: "Dr. Cano", profession: "ginecología" },
+  { title: "Hábitos que ayudan en Endometriosis", category: "Tratamiento", url: "https://link.endopedia.com.mx/habitos-y-endo", doctor: "Dra. Paula Galán Sance", profession: "ginecología" },
+  { title: "Endometriosis una enfermedad con impacto sistémico", category: "Tratamiento", url: "https://link.endopedia.com.mx/endo-enfermedad-sistemica", doctor: "Dr. Cristian Hidalgo", profession: "ginecología" },
+  { title: "Presión intraabdominal y distensibilidad del suelo pélvico", category: "Tratamiento", url: "https://link.endopedia.com.mx/presionabdominal", doctor: "PUBMED CENTRAL", profession: "Investigación" },
+  // Categoría: Prolapso
+  { title: "Prolapsos y su tratamiento en fisioterapia", category: "Prolapso", url: "https://link.endopedia.com.mx/prolapsos", doctor: "Sandra Malagon", profession: "Fisioterapia" },
+  { title: "Cómo se siente un prolapso", category: "Prolapso", url: "https://link.endopedia.com.mx/como-se-siente-un-prolapso", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "¿Sabes cómo identificar el prolapso?", category: "Prolapso", url: "https://link.endopedia.com.mx/prolapso", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "¿Pesarios vaginales, que son?", category: "Prolapso", url: "https://link.endopedia.com.mx/pesariovaginal", doctor: "Dra. Lexy Navarro", profession: "ginecología" },
+  // Categoría: Kegel
+  { title: "Cuidar nuestro suelo pélvico es MÁS QUE KEGEL", category: "Kegel", url: "https://link.endopedia.com.mx/kegel-y-prolapso", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "Kegel siempre, podrían empeorar tu dolor", category: "Kegel", url: "https://link.endopedia.com.mx/kegel-siempre-podrian-empeorar-tu-dolor", doctor: "ensuelo firme", profession: "Clínica de fisioterapia" },
+  { title: "¿Los Kegel fortalecen ?", category: "Kegel", url: "https://link.endopedia.com.mx/ejercicio-kegel-es-como-decir-sentadilla", doctor: "therapelvix", profession: "Clínica de fisioterapia" },
+  { title: "Te dijeron que la fisioterapia de piso pélvico es solo hacer Kegel?", category: "Kegel", url: "https://link.endopedia.com.mx/kegels?", doctor: "Edna Cortes", profession: "ginecología" },
+  { title: "cuidado con los ejercicios de Kegel", category: "Kegel", url: "https://link.endopedia.com.mx/cuidadokegels", doctor: "Edna Cortes", profession: "ginecología" },
+  // Categoría: Fisioterapia
+  { title: "La fisioterapia es mas que hacer Kegel, sobre todo en Endo", category: "Fisioterapia", url: "https://link.endopedia.com.mx/mas-que-kegel-para-suelo-pelvico-en-endo", doctor: "Dra. Ana sierra", profession: "ginecología" },
+  { title: "Ejercicios para relajar el piso pélvico", category: "Fisioterapia", url: "https://link.endopedia.com.mx/ejercicios-para-relajar-el-piso-pelvico", doctor: "Cristal Sarabia", profession: "Fisioterapia" },
+  { title: "Ya me operé sigo con dolor, enfoque de  Fisioterapia", category: "Fisioterapia", url: "https://link.endopedia.com.mx/ya-me-opere-sigo-con-dolor-piso-pelvico", doctor: "Dra. Sofía Vera", profession: "ginecología" },
+  { title: "Diagnostico de Endo desde piso pélvico", category: "Fisioterapia", url: "https://link.endopedia.com.mx/diagnostico-endo-desde-piso-pelvico", doctor: "Dra. Ana sierra", profession: "ginecología" },
+  { title: "Porque es importante la fisioterapia en Endo como tratamiento", category: "Fisioterapia", url: "https://link.endopedia.com.mx/Fisioterapia-Endo", doctor: "Dr. Ana Sierra", profession: "Neuropelveología" },
+  { title: "Beneficios de la fisioterapia en Endo y adenomiosis", category: "Fisioterapia", url: "https://link.endopedia.com.mx/beneficios-de-la-fisioterapia-en-endo-y-adenomiosis", doctor: "therapelvix", profession: "Clínica de fisioterapia" },
+  { title: "Cómo se siente un piso pélvico contracturado", category: "Fisioterapia", url: "https://link.endopedia.com.mx/pisopelvicocontracturado", doctor: "Edna Cortes", profession: "ginecología" },
+  // Categoría: Sistema nervioso
+  { title: "Endo y sueño", category: "Sistema nervioso", url: "https://link.endopedia.com.mx/endo-y-sueno", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Neblina mental y endometriosis 2", category: "Sistema nervioso", url: "https://link.endopedia.com.mx/neblina-mental", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Síntomas de compresión nerviosa y como diferenciar de Endometriosis", category: "Sistema nervioso", url: "https://link.endopedia.com.mx/compresion-nerviosa", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "Que nervios se comprometen con la endometriosis", category: "Sistema nervioso", url: "https://link.endopedia.com.mx/neuropelveologia", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  // Categoría: Adherencias
+  { title: "Qué son las adherencias", category: "Adherencias", url: "https://link.endopedia.com.mx/que-son-las-adherencias", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  // Categoría: Alimentación
+  { title: "La nutrición en Endometriosis va mas allá de solamente comer bien", category: "Alimentación", url: "https://link.endopedia.com.mx/personalizar-dieta", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "¿No te funciono la dieta antiinflamatoria?", category: "Alimentación", url: "https://link.endopedia.com.mx/no-funciona-mi-dieta-antiinflamatoria", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "¡Cómo identificar lo que inflama?", category: "Alimentación", url: "https://link.endopedia.com.mx/como-identificar-lo-que-inflama", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Kéfir y Endometriosis", category: "Alimentación", url: "https://link.endopedia.com.mx/kefir-y-endo", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Intolerancia a la fructosa", category: "Alimentación", url: "https://link.endopedia.com.mx/intolerancia-a-la-fructosa", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Endometriosis y viajes", category: "Alimentación", url: "https://link.endopedia.com.mx/viajes-y-endometriosis", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Eliminar alimentos en dieta para Endometriosis", category: "Alimentación", url: "https://link.endopedia.com.mx/endo-y-dieta", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Restringir alimentos para no tener dolor, efecto domino", category: "Alimentación", url: "https://link.endopedia.com.mx/restriccion-de-alimentos", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "Como puede cambiar tu alimentación en endometriosis", category: "Alimentación", url: "https://link.endopedia.com.mx/dieta-mediterranea-inflamatoria", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "En intestino recicla estrógenos", category: "Alimentación", url: "https://link.endopedia.com.mx/en-intestino-recicla-estrogenos", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Que alimentos si conviene priorizar en Endometriosis", category: "Alimentación", url: "https://link.endopedia.com.mx/endo-ejercicio-y-alimentacion", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "La dieta de Endo no es la misma para todas", category: "Alimentación", url: "https://link.endopedia.com.mx/la-dieta-de-endo-no-es-la-misma-para-todas", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Cereales mejores tolerados en Endometriosis", category: "Alimentación", url: "https://link.endopedia.com.mx/cereales-mejores-tolerados", doctor: "Ariadna López", profession: "Nutrición" },
+  // Categoría: Suplementación
+  { title: "Electrolitos minerales contra la fatiga en Endometriosis", category: "Suplementación", url: "https://link.endopedia.com.mx/hidratacion", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Creatina y endometriosis", category: "Suplementación", url: "https://link.endopedia.com.mx/creatina", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Creatina y endometriosis  2", category: "Suplementación", url: "https://link.endopedia.com.mx/endo-y-creatina", doctor: "Dr. Juan Luis Gallardo", profession: "Medicina funcional" },
+  { title: "Vitamina D toxicidad", category: "Suplementación", url: "https://link.endopedia.com.mx/vitamina-d-toxicidad", doctor: "Dr. Juan Luis Gallardo", profession: "Medicina funcional" },
+  { title: "NAC y endometriosis", category: "Suplementación", url: "https://link.endopedia.com.mx/nac-y-endometriosis", doctor: "Ariadna López", profession: "Nutrición" },
+  // Categoría: Microbiota
+  { title: "Microbiota y menopausia", category: "Microbiota", url: "https://link.endopedia.com.mx/microbiota-y-menopausia", doctor: "Dr. Juan Luis Gallardo", profession: "Medicina funcional" },
+  // Categoría: Analítica
+  { title: "Histamina y Endometriosis", category: "Analítica", url: "https://link.endopedia.com.mx/histamina-y-endo", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Prolactina y cortisol", category: "Analítica", url: "https://link.endopedia.com.mx/prolactina-y-cortisol", doctor: "Ariadna López", profession: "Nutrición" },
+  { title: "Endometriosis y sistema inmune que dice la ciencia", category: "Analítica", url: "https://link.endopedia.com.mx/endo-y-sistema-inmune", doctor: "Ariadna López", profession: "Nutrición" },
+  // Categoría: Infección vaginal
+  { title: "Infecciones vaginales de repetición y Endo", category: "Infección vaginal", url: "https://link.endopedia.com.mx/infecciones-vaginales-y-endo", doctor: "Dr. Ana Sierra", profession: "Neuropelveología" },
+  // Categoría: Funcional
+  { title: "Endometriosis desde un enfoque funcional", category: "Funcional", url: "https://link.endopedia.com.mx/medicina-funcional-y-endo", doctor: "Dr. Ariana Lara", profession: "Medica integrativa" },
+  // Categoría: Dolor
+  { title: "Que es la Neuropelviologia, dolor pélvico crónico", category: "Dolor", url: "https://link.endopedia.com.mx/neuropelviologia", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "Compresión en el nervio pudendo síntomas", category: "Dolor", url: "https://link.endopedia.com.mx/neuropelviologia-2", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "Endometriosis y dolor en piernas", category: "Dolor", url: "https://link.endopedia.com.mx/endo-y-dolor-en-piernas", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "Tengo dolor pero mis estudios salen normales", category: "Dolor", url: "https://link.endopedia.com.mx/dolor-y-estudios-bien", doctor: "Dr. Ana Sierra", profession: "Neuropelveología" },
+  { title: "Dolor en Endometriosis y sistema inmune", category: "Dolor", url: "https://link.endopedia.com.mx/dolor-en-endo", doctor: "Dr. Ana Sierra", profession: "Neuropelveología" },
+  // Categoría: En vivo
+  { title: "¿En vivo la endometriosis siempre se opera?", category: "En vivo", url: "https://link.endopedia.com.mx/en-vivos", doctor: "Dr. Luis Gallardo", profession: "ginecología" },
+  // Categoría: Vejiga
+  { title: "Endometriosis en la vejiga", category: "Vejiga", url: "https://link.endopedia.com.mx/endometriosis-en-la-vejiga", doctor: "Dr. Armando Menocal Tavernier", profession: "ginecología" },
+  // Categoría: Faja
+  { title: "No usar faja después de histerectomía", category: "Faja", url: "https://link.endopedia.com.mx/no-usar-faja-a-histerectomia", doctor: "femmepelviccare", profession: "Clínica de fisioterapia" },
+  { title: "No usar faja después de histerectomía 2", category: "Faja", url: "https://link.endopedia.com.mx/no-usar-faja-a-histerectomia-2", doctor: "Dr. Antonio Salinas", profession: "Urología y ginecología" },
+  { title: "Diferencias entre faja abdominal y cinturón pélvico en embarazo y posparto", category: "Faja", url: "https://link.endopedia.com.mx/fajaocinturon", doctor: "suelo pélvico", profession: "Fisioterapia" },
+  // Categoría: Reemplazo hormonal
+  { title: "Histerectomía y reemplazo hormonal", category: "Reemplazo hormonal", url: "https://link.endopedia.com.mx/histerectomia-y-reemplazo-hormonal", doctor: "Dra. Paula Galán Sance", profession: "ginecología" },
+  // Categoría: Menopausia
+  { title: "Endo y menopausia", category: "Menopausia", url: "https://link.endopedia.com.mx/endo-y-menopausia", doctor: "Instituto Doyenne", profession: "clínica especializada en Endo" },
+  { title: "¿Con la Menopausia la endometriosis se va?", category: "Menopausia", url: "https://link.endopedia.com.mx/endo-menopausia", doctor: "Antonia González Onêt", profession: "Embrióloga Integrativa" },
+  { title: "¡Endometriosis y menopausia es la solución?", category: "Menopausia", url: "https://link.endopedia.com.mx/endo-menopausia-2", doctor: "Dr. Tomás Gómez", profession: "ginecología" },
+  { title: "¿Sabías que la histerectomía puede influir en la gravedad de los síntomas menopáusicos?", category: "Menopausia", url: "https://link.endopedia.com.mx/hiterectomiaymeno", doctor: "Edna Cortes", profession: "ginecología" },
+  // Categoría: Estudios Científicos
+  { title: "Nuevo tratamiento no hormonal para endometriosis", category: "Estudios Científicos", url: "https://link.endopedia.com.mx/nuevos-avances", doctor: "PUBMED CENTRAL", profession: "Investigación" },
+  // Categoría: Neuropelveología
+  { title: "Congestión venosa pélvica puede coexistir con Endometriosis", category: "Neuropelveología", url: "https://link.endopedia.com.mx/congestion-venosa-pelvica", doctor: "Dr. Ana Sierra", profession: "Neuropelveología" },
+  { title: "Congestión pélvica no es Endometriosis", category: "Neuropelveología", url: "https://link.endopedia.com.mx/congestion-pelvica-no-es-endo", doctor: "Dr. Ana Sierra", profession: "Neuropelveología" },
+  // Categoría: Guías clínicas
+  { title: "Guía ESHRE 2022 de Endometriosis", category: "Guías clínicas", url: "https://link.endopedia.com.mx/GuiaESHRE", doctor: "ESHRE", profession: "Investigación" },
+  // Categoría: Incontinencia
+  { title: "Silla para incontinencia urinaria", category: "Incontinencia", url: "https://link.endopedia.com.mx/sillaincontinencia", doctor: "Edna Cortes", profession: "ginecología" },
 ];
